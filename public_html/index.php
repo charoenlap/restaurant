@@ -3,7 +3,6 @@
 	header('Access-Control-Allow-Origin: *');  
 	header('Content-Type: text/html; charset=utf-8');
 	date_default_timezone_set('Asia/Bangkok');
-	
 	ob_start();
 	session_start();
 	ini_set('display_errors', 1);
