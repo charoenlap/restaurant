@@ -12,25 +12,24 @@
 	define('cache_db','0');
 	if(PRODUCTION){
 		// Config DB SERVER
-		define('PREFIX', 'gs_');
+		define('PREFIX', 'res_');
 		define('DB_HOST','localhost');
 		define('DB_USER','hostphp7_epeti');
 		define('DB_PASS','hTXp42Xo');
 		define('DB_DB','hostphp7_epeti');
-		$base = '/home/restaurant/domains/thaisport-stadium.com/public_html/';
-		define('DOCUMENT_ROOT','/home/restaurant/domains/thaisport-stadium.com/lib/');
-		define('DOCUMENT_ROOT_LINE','/home/restaurant/domains/thaisport-stadium.com/public_html/line/');
-		define('MURL','http://thaisport-stadium.com/');
-		define('PATH_JSON','/home/restaurant/domains/thaisport-stadium.com/json/');
+		$base = '/home/charoenlap/domains/charoenlap.com/public_html/restaurant/';
+		define('DOCUMENT_ROOT','/home/charoenlap/domains/charoenlap.com/public_html/restaurant/lib/');
+		define('DOCUMENT_ROOT_LINE','/home/charoenlap/domains/charoenlap.com/public_html/restaurant/line/');
+		define('MURL','http://charoenlap.com/restaurant/');
+		define('PATH_JSON','/home/charoenlap/domains/charoenlap.com/public_html/restaurant/json/');
 	}else{
 		// Config DB localhost
-		define('PREFIX', 'gs_');
+		define('PREFIX', 'res_');
 		define('DB_HOST','localhost');
 		define('DB_USER','root');
 		define('DB_PASS','root');
 		define('DB_DB','restaurant');
 		$base = $_SERVER['DOCUMENT_ROOT'].'/restaurant/public_html/';
-		// echo $_SERVER['DOCUMENT_ROOT'];exit();
 		define('DOCUMENT_ROOT','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/lib/');
 		define('DOCUMENT_ROOT_LINE','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/public_html/line/');
 		define('MURL','http://localhost/restaurant/public_html/');

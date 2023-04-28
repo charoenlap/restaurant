@@ -1,8 +1,8 @@
 <div class="container mt-4">
     <div class="row">
-    <?php for ($i = 1; $i <= 15; $i++) { ?>
-        <div class="col-2">
-            <a href="<?php echo route('order');?>" class="btn btn-primary btn-block mb-4"><?php echo $i;?></a>
+    <?php foreach ($tables->rows as $table) { ?>
+        <div class="col-4">
+            <a href="<?php echo route('order&table_id='.$table['id']);?>" class="btn btn-primary btn-block mb-4"><?php echo $table['table_name'];?></a>
         </div>    
     <?php } ?>
     </div>

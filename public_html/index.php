@@ -3,6 +3,7 @@
 	header('Access-Control-Allow-Origin: *');  
 	header('Content-Type: text/html; charset=utf-8');
 	date_default_timezone_set('Asia/Bangkok');
+	
 	ob_start();
 	session_start();
 	ini_set('display_errors', 1);
@@ -16,9 +17,9 @@
 		require_once($_SERVER['DOCUMENT_ROOT'].'/restaurant/public_html/catalog/setup.php'); 
 		require_once($_SERVER['DOCUMENT_ROOT'].'/restaurant/lib/system/loader/autoload.php'); 
 	}else{
-		require_once('/home/restaurant/domains/restaurant-stadium.com/config/domains/restaurant/config.php'); 
-		require_once('/home/restaurant/domains/restaurant-stadium.com/lib/function/main_function.php');
+		require_once('/home/charoenlap/domains/charoenlap.com/public_html/restaurant/config/domains/restaurant/config.php'); 
+		require_once('/home/charoenlap/domains/charoenlap.com/public_html/restaurant/lib/function/main_function.php');
 		require_once('catalog/setup.php'); 
-		require_once('/home/restaurant/domains/restaurant-stadium.com/lib/system/loader/autoload.php'); 
+		require_once('/home/charoenlap/domains/charoenlap.com/public_html/restaurant/lib/system/loader/autoload.php'); 
 	}
 ?>
