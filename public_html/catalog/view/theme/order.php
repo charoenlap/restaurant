@@ -162,7 +162,7 @@
     </div>
 </div>
 <style>
-    .delete-btn:hover {
+    .delete-btn:hover { 
         color: #fff;
         background-color: #dc3545;
         border-color: #dc3545;
