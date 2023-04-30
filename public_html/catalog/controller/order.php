@@ -62,7 +62,7 @@
 						'option_id'	=> $data['option_id'],
 						'price'		=> $data['price'],
 						'comment'	=> $data['comment'],
-						'flag_confirm'	=> 1,
+						'flag_confirm'	=> 0,
 						'flag_printer'	=> 0,
 						'flag_checkout'	=> 0,
 						'date_create'	=> date('Y-m-d H:i:s'),
