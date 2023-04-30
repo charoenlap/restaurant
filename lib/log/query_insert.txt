@@ -121,3 +121,4 @@
 2023-04-30 18:00:27 : insert into res_payment set `type_payment` = '', `table_id` = '1', `amount` = '79.92', `date_create` = '2023-04-30 18:00:27'
 2023-04-30 18:02:45 : insert into res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '1', `price` = '9.99', `comment` = ' ไม่ผัก', `flag_confirm` = '1', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-04-30 18:02:45'
 2023-04-30 18:02:55 : insert into res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '1', `price` = '9.99', `comment` = ' ไม่ผัก', `flag_confirm` = '1', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-04-30 18:02:55'
+2023-04-30 18:35:04 : insert into res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '1', `price` = '9.99', `comment` = '', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-04-30 18:35:04'

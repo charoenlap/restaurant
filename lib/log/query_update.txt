@@ -920,3 +920,6 @@
 2023-04-30 18:03:04 : update res_order set `flag_printer` = '1' WHERE  table_id = 1 AND payment_id=0
 2023-04-30 18:03:04 : update res_order set `flag_printer` = '1' WHERE  table_id = 1 AND payment_id=0
 2023-04-30 18:03:05 : update res_order set `flag_printer` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-04-30 18:35:04 : update res_table set `table_status` = '1' WHERE id=1
+2023-04-30 18:35:08 : update res_order set `flag_confirm` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-04-30 18:35:23 : update res_order set `flag_printer` = '1' WHERE id=1
