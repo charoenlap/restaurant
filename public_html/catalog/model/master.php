@@ -71,7 +71,7 @@
             LEFT JOIN res_table ON res_order.table_id = res_table.id 
             WHERE flag_confirm = 1  AND flag_printer = 0 AND flag_checkout = 0 GROUP BY table_id";
             $tables = $this->query($sql);
-            var_dump($tables->rows);exit();
+            // var_dump($tables->rows);exit();
             foreach($tables->rows as $table){
                 $sql_order = "SELECT * FROM res_order 
                 LEFT JOIN res_menu ON res_order.menu_id = res_menu.id 
