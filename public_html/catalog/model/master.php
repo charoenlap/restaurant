@@ -51,7 +51,7 @@
         public function submitPrintOrder($table_id){
             $result = array();
             $update = array(
-                'flag_printer' => 1
+                'flag_printer' => 0
             );
             $result = $this->update('order',$update," table_id = ".$table_id." AND payment_id=0");
             return $result;
