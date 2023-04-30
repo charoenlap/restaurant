@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-4 pb-4">
     <div class="row">
         <div class="col-6">
             <table class="table" id="tableList">
@@ -173,7 +173,7 @@
             // console.log(response);
             $.each(response, function(key, value) {
                 var newRow = '<tr data-toggle="modal" data-target="#editModal" menu-id="'+value.menu_id+'" flag-confirm="'+value.flag_confirm+'">' +
-                        '<td>' + name + '  <div>' + value.comment + '</div></td>' +
+                        '<td>' + value.name + '  <div>' + value.comment + '</div></td>' +
                         // '<td>' + value.option_name + '</td>' +
                         '<td>' + value.price +
                         '<input type="hidden" name="menu_id[]" value="'+value.id+'">' +

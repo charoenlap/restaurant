@@ -16,6 +16,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
         
+        <link rel="stylesheet" href="assets/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="assets/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     </head>

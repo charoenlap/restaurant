@@ -29,25 +29,27 @@
 			$result = $this->model('master')->getOrderID($id);
 			$this->json($result->rows);
 		}
-		public function submitOrder(){
+		public function submitPrintOrder(){
 			if(method_post()){
 				$data = $_POST;
-
-				foreach($data['menu_id'] as $key => $val){
-					$insert = array(
-						'table_id'  => $data['table_id'][$key],
-						'menu_id'	=> $data['menu_id'][$key],
-						'option_id'	=> $data['option_id'][$key],
-						'price'		=> $data['price'][$key],
-						'comment'	=> $data['comment'][$key],
-						'flag_confirm'	=> 1,
-						'flag_printer'	=> 0,
-						'flag_checkout'	=> 0,
-						'date_create'	=> date('Y-m-d H:i:s'),
-					);
-					$this->model('master')->submitOrder($insert);
-					echo "success";
-				}
+				$table_id = (int)$data['table_id'];
+				$this->model('master')->submitPrintOrder($table_id);
+				echo "success";
+				// foreach($data['menu_id'] as $key => $val){
+				// 	$insert = array(
+				// 		'table_id'  => $data['table_id'][$key],
+				// 		'menu_id'	=> $data['menu_id'][$key],
+				// 		'option_id'	=> $data['option_id'][$key],
+				// 		'price'		=> $data['price'][$key],
+				// 		'comment'	=> $data['comment'][$key],
+				// 		'flag_confirm'	=> 1,
+				// 		'flag_printer'	=> 0,
+				// 		'flag_checkout'	=> 0,
+				// 		'date_create'	=> date('Y-m-d H:i:s'),
+				// 	);
+				// 	$this->model('master')->submitOrder($insert);
+				// 	echo "success";
+				// }
 			}
 		}
 		public function submitSingleOrder(){
@@ -66,6 +68,7 @@
 						'date_create'	=> date('Y-m-d H:i:s'),
 					);
 					$this->model('master')->submitOrder($insert);
+					$this->model('master')->updateTable($data['table_id'],1);
 					echo "success";
 				// }
 			}
