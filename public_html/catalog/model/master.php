@@ -62,6 +62,7 @@
                 $result_order = array();
                 foreach($orders->rows as $order){
                     $result_order[] = array(
+                        'id'            => $order['id'],
                         'menu_name'     => $order['name'],
                         'option_name'   => $order['option_name'],
                         'comment'       => $order['comment']
