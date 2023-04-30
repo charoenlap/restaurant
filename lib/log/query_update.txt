@@ -892,3 +892,14 @@
 2023-03-27 18:45:04 : update gs_package set `title` = 'รายครั้ง', `detail` = 'กรณีเลือกแพคเกจแบบรายครั้งท่านสามารถ <h3>เลือกรับชมเนื้อหาที่ท่านสนใจจากหน้าหลัก แล้วกดรับชมเพื่อเข้าดู</h3>', `price` = '99', `date_create` = '2023-03-27 18:45:04' WHERE id = '2'
 2023-03-27 18:47:31 : update gs_package set `title` = 'รายครั้ง', `detail` = 'กรณีเลือกแพคเกจแบบรายครั้งท่านสามารถ <h3>เลือกรับชมเนื้อหาที่ท่านสนใจจากหน้าหลัก แล้วกดรับชมเพื่อเข้าดู</h3>', `price` = '101', `date_create` = '2023-03-27 18:47:31' WHERE id = '2'
 2023-04-19 20:34:53 : update gs_content_sub set `title` = 'สนามกีฬาไก่ชนเทิดไท 23 เมษายน 2566', detail = NULL, `location` = 'สนามกีฬาไก่ชนเทิดไท', `date_start` = '2023-04-23 00:00:00', `id_package` = '2', `url` = 'wss://streaming01.thaisport-stadium.com:3334/sportlive/sport_live01', free = NULL, `date_create` = '2023-04-19 20:34:53' WHERE id = '14'
+2023-04-30 14:21:21 : update res_order set `payment_id` = '1' WHERE table_id=1
+2023-04-30 14:23:49 : update res_order set `payment_id` = '1' WHERE table_id=1
+2023-04-30 14:23:49 : update res_table set table_status = NULL WHERE id=1
+2023-04-30 14:27:22 : update res_order set `payment_id` = '1', `flag_checkout` = '1' WHERE table_id=1
+2023-04-30 14:27:22 : update res_table set table_status = NULL WHERE id=1
+2023-04-30 14:38:29 : update res_order set `payment_id` = '1', `flag_checkout` = '1' WHERE table_id=1
+2023-04-30 14:38:29 : update res_table set table_status = NULL WHERE id=1
+2023-04-30 14:46:44 : update res_order set `payment_id` = '1', `flag_checkout` = '1' WHERE table_id=1
+2023-04-30 14:46:44 : update res_table set table_status = NULL WHERE id=1
+2023-04-30 14:59:12 : update res_order set `flag_printer` = '1' WHERE id=0
+2023-04-30 14:59:28 : update res_order set `flag_printer` = '1' WHERE id=1

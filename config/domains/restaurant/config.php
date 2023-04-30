@@ -12,7 +12,7 @@
 	define('cache_db','0');
 	if($_SERVER['SERVER_NAME'] != 'localhost'){
 		// Config DB SERVER
-		define('PREFIX', 'gs_');
+		define('PREFIX', 'res_');
 		define('DB_HOST','localhost');
 		define('DB_USER','charoenlap_res');
 		define('DB_PASS','1Kq80dSn');
@@ -24,7 +24,7 @@
 		define('PATH_JSON','/home/charoenlap/domains/charoenlap.com/public_html/restaurant/json/');
 	}else{
 		// Config DB localhost
-		define('PREFIX', 'gs_');
+		define('PREFIX', 'res_');
 		define('DB_HOST','localhost');
 		define('DB_USER','root');
 		define('DB_PASS','root');

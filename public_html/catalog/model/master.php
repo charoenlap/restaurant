@@ -1,5 +1,13 @@
 <?php
     class MasterModel extends db {
+        public function updateOrderPrint($id=0){
+            $result = array();
+            $update = array(
+                'flag_printer' =>  1
+            );
+            $result = $this->update('order',$update,'id='.$id);
+            return $result;
+        }
         public function getTable(){
             $result = array();
             $result = $this->query("SELECT * FROM res_table");
@@ -40,9 +48,12 @@
             $result = $this->insert('order',$data);
             return $result;
         }
+        
         public function getOrderID($id=0){
             $result = array();
-            $sql = "SELECT * FROM res_order LEFT JOIN res_option ON res_order.option_id = res_option.id WHERE table_id = ".(int)$id;
+            $sql = "SELECT * FROM res_order 
+            LEFT JOIN res_option ON res_order.option_id = res_option.id 
+            WHERE table_id = ".(int)$id." AND flag_checkout=0";
             $result = $this->query($sql);
             return $result;
         }
@@ -76,6 +87,30 @@
             }
             // var_dump($result);
             
+            return $result;
+        }
+        public function submitCheckout($data){
+            $result = array();
+            $result = $this->insert('payment',$data);
+            return $result;
+        }
+        public function updateOrderPayment($table_id=0,$payment_id=0){
+            $result = array();
+            $update = array(
+                'payment_id' =>  $payment_id,
+                'flag_checkout' => 1
+            );
+            $result = $this->update('order',$update,'table_id='.$table_id);
+            return $result;
+        }
+        public function updateTable($table_id=0,$status=0){
+            $result = array();
+            if($table_id){
+                $update = array(
+                    'table_status' =>   0
+                );
+                $result = $this->update('table',$update,'id='.$table_id);
+            }
             return $result;
         }
 	}

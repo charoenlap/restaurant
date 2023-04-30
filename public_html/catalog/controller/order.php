@@ -5,6 +5,11 @@
 			$result = $this->model('master')->getOrders();
 			$this->json($result);
 		}
+		public function feedPrinterUpdate(){
+			$id = (int)get('order_id');
+			$result = $this->model('master')->updateOrderPrint($id);
+			$this->json($result);
+		}
 		public function index() {
 	    	$data = array();
 			$data['category'] = $this->model('master')->getCategory();
@@ -27,6 +32,7 @@
 		public function submitOrder(){
 			if(method_post()){
 				$data = $_POST;
+
 				foreach($data['menu_id'] as $key => $val){
 					$insert = array(
 						'table_id'  => $data['table_id'][$key],
@@ -42,6 +48,26 @@
 					$this->model('master')->submitOrder($insert);
 					echo "success";
 				}
+			}
+		}
+		public function submitSingleOrder(){
+			if(method_post()){
+				$data = $_POST;
+				// foreach($data['menu_id'] as $key => $val){
+					$insert = array(
+						'table_id'  => $data['table_id'],
+						'menu_id'	=> $data['menu_id'],
+						'option_id'	=> $data['option_id'],
+						'price'		=> $data['price'],
+						'comment'	=> $data['comment'],
+						'flag_confirm'	=> 1,
+						'flag_printer'	=> 0,
+						'flag_checkout'	=> 0,
+						'date_create'	=> date('Y-m-d H:i:s'),
+					);
+					$this->model('master')->submitOrder($insert);
+					echo "success";
+				// }
 			}
 		}
 	}

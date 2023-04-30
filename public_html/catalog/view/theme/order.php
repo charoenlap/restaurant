@@ -332,6 +332,10 @@
             success: function(response) {
                 // console.log(response);
                 // window.location.href = 'index.php?route=home';
+                $('tbody tr[flag-confirm="0"]').each(function() {
+                    // Change the "flag-confirm" attribute to "1"
+                    $(this).attr('flag-confirm', '1');
+                });
             },
             error: function(xhr, status, error) {
                 // Handle the error here
@@ -409,6 +413,63 @@ $(document).ready(function() {
         console.log(error);
       }
     // });
+    });
+});
+
+$(document).ready(function() {
+  $('#checkBill-btn').click(function(e) {
+    e.preventDefault();
+    
+    // Check if there are any rows with flag-confirm=0
+    if ($('tbody tr[flag-confirm="0"]').length == 0) {
+      // There are no rows with flag-confirm=0, so redirect the user immediately
+      window.location = 'index.php?route=checkout&table_id=<?php echo get('table_id');?>';
+      return;
+    }
+    
+    // Initialize the counter variable
+    var numRequests = 0;
+    
+    $('tbody tr').each(function() {
+      if ($(this).attr('flag-confirm') == '0') {
+        // Get the data for this row
+        var menu_id = $(this).find('input[name="menu_id[]"]').val();
+        var table_id = $(this).find('input[name="table_id[]"]').val();
+        var price = $(this).find('input[name="price[]"]').val();
+        var comment = $(this).find('input[name="comment[]"]').val();
+        var option_id = $(this).find('input[name="option_id[]"]').val();
+        
+        // Send the data using AJAX
+        $.ajax({
+          url: 'index.php?route=order/submitSingleOrder',
+          type: 'POST',
+          data: {
+            menu_id: menu_id,
+            table_id: table_id,
+            price: price,
+            comment: comment,
+            option_id: option_id
+          },
+          success: function(response) {
+            console.log(response);
+            // Increment the counter variable
+            numRequests++;
+            
+            // Check if all requests have completed
+            if (numRequests == $('tbody tr[flag-confirm="0"]').length) {
+              // All requests have completed successfully, so redirect the user
+              window.location = 'index.php?route=checkout&table_id=<?php echo get('table_id');?>';
+            }
+          },
+          error: function() {
+            // Handle errors
+          }
+        });
+      }
+    });
   });
 });
+
+
+
 </script>
