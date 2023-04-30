@@ -402,7 +402,7 @@
             var change = received - netTotal;
             
             // Display the results
-            $('#money').text(received.toFixed(2));
+            $('#money').text(received.toFixed(2)); 
             $('#change').text(change.toFixed(2));
             if(parseFloat($('#change').text())>=0){
                 console.log($('#nettotal').text());
