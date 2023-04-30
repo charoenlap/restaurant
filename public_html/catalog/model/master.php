@@ -73,7 +73,7 @@
             $tables = $this->query($sql);
             // var_dump($tables->rows);exit();
             foreach($tables->rows as $table){
-                $sql_order = "SELECT * FROM res_order 
+                $sql_order = "SELECT *,res_order.id AS id FROM res_order 
                 LEFT JOIN res_menu ON res_order.menu_id = res_menu.id 
                 LEFT JOIN res_option ON res_order.option_id = res_option.id 
                 WHERE table_id = ".$table['table_id']." AND flag_confirm = 1 AND flag_printer = 0 AND flag_checkout = 0 ";
