@@ -513,7 +513,7 @@ $(document).on('click','.add-menu',function(event) {
                 optionsHtml += `
                 <label class="btn btn-outline-primary active">
                     <input type="radio" checked name="option" value="${option.id}" data-id="${option.id}" data-price="${option.price}" data-name="${option.option_name}">
-                    ${option.option_name} ${option.price}
+                    ${option.option_name} ${parseInt(option.price)}
                 </label>
                 `;
             }else{
