@@ -343,7 +343,7 @@
         elementEdit.find('td:eq(1)').html('<div class="foodName">' + name + '</div>  <div class="comment">' + comment + '</div>');
 
         elementEdit.find('td:eq(2)').empty();
-        elementEdit.find('td:eq(2)').html('<div class="optionText">' + option + '</div>');
+        elementEdit.find('td:eq(2)').html('<div class="optionText">' + (option ? option : '') + '</div>');
 
         elementEdit.find('td:eq(3)').empty();
         var html = '<div class="price">'+price+'</div><input type="hidden" name="menu_id[]" value="'+id+'">'+
@@ -401,7 +401,7 @@
             var newRow = '<tr data-toggle="modal" data-target="#editModal" menu-id="'+id+'" order-id="'+response+'" flag-confirm="0">' +
                         '<td>'+print+'</td>'+
                         '<td><div class="foodName">' + name + '</div>  <div class="comment">' + comment + '</div></td>' +
-                        '<td><div class="optionText">' + option + '</div></td>' +
+                        '<td><div class="optionText">' + (option ? option : '') + '</div></td>' +
                         '<td><div class="price">' + price + '</div>'+
                         '<input type="hidden" name="menu_id[]" value="'+id+'">' +
                         '<input type="hidden" name="table_id[]" value="<?php echo get('table_id'); ?>">' +
@@ -446,9 +446,6 @@
         comment += ' ' + text;
         $('#editModal .comment').val(comment);
     });
-</script>
-<script>
-    
 </script>
 <script>
     // Calculate total sum and update checkout button
