@@ -971,3 +971,14 @@
 2023-05-01 17:34:21 : update res_table set `table_status` = '1' WHERE id=1
 2023-05-01 17:34:35 : update res_table set `table_status` = '1' WHERE id=1
 2023-05-01 17:35:59 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 18:28:55 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 18:29:33 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 18:29:37 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 18:30:46 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 18:31:36 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 18:31:44 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 18:32:16 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 18:33:20 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 18:41:34 : update res_order set `payment_id` = '7', `flag_checkout` = '1' WHERE table_id=1
+2023-05-01 18:41:34 : update res_table set table_status = NULL WHERE id=1
+2023-05-01 18:41:49 : update res_table set `table_status` = '1' WHERE id=1

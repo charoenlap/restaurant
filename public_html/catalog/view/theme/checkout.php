@@ -164,6 +164,33 @@
 
 </style>
 <script>
+    $(document).on('click','#QRcode',function(e){
+        $('#num-pad-input').val(parseFloat($('#total').text()));
+        // $('#num-pad-input').change();
+        var value = $('#num-pad-input').val();
+        if ($(this).data('value') !== undefined) {
+            value += $(this).data('value');
+        }else {
+            value = 0;
+        }
+        // $('#num-pad-input').val(value);
+        // Calculate the new values
+        var total = 0;
+        $('input[name="price[]"]').each(function() {
+        total += parseFloat($(this).val());
+        });
+        $('#total').text(total.toFixed(2));
+        var discount = parseFloat($('#text-discount').val()) || 0;
+        $('#discount').text(discount.toFixed(2));
+        var netTotal = total - discount;
+        $('#nettotal').text(netTotal.toFixed(2));
+        var money = parseFloat($('#num-pad-input').val()) || 0;
+        $('#money').text(money.toFixed(2));
+        var change = money - netTotal;
+        $('#change').text(change.toFixed(2));
+    });
+</script>
+<script>
     $(document).ready(function() {
         $.ajax({
         url: 'index.php?route=order/getOrder',
@@ -294,8 +321,7 @@
             }else {
                 value = 0;
             }
-            $('#num-pad-input').val(value);
-            // Calculate the new values
+            $('#num-pad-input').val(  parseInt(value)  );
             var total = 0;
             $('input[name="price[]"]').each(function() {
             total += parseFloat($(this).val());
@@ -354,6 +380,7 @@
         $('#clearOrderByQR').click(function() {
             // Get the total amount due and the amount received
             var total = parseFloat($('#total').text());
+            
             var discount = parseFloat($('#discount').text());
             var netTotal = total - discount;
             var received = parseFloat($('#num-pad-input').val());

@@ -333,6 +333,7 @@
         var price       = $('#editModal .price').text();
         // alert(price);
         var option_id   = $('#editModal input[name="option"]:checked').attr('data-id');
+        var option_price = $('#editModal input[name="option"]:checked').attr('data-price');
         var option      = $('#editModal input[name="option"]:checked').attr('data-name');
         var comment     = $('#editModal #comment').val();
         
@@ -346,9 +347,10 @@
         elementEdit.find('td:eq(2)').html('<div class="optionText">' + (option ? option : '') + '</div>');
 
         elementEdit.find('td:eq(3)').empty();
+        var newPrice = (parseFloat(price) + parseFloat(option_price));
         var html = '<div class="price">'+price+'</div><input type="hidden" name="menu_id[]" value="'+id+'">'+
         '<input type="hidden" name="table_id[]" value="<?php echo get('table_id'); ?>">'+
-        '<input type="hidden" name="price[]" value="'+ price +'">'+
+        '<input type="hidden" name="price[]" value="'+ newPrice +'">'+
         '<input type="hidden" name="comment[]" value="'+ comment +'">'+
         '<input type="hidden" name="option_id[]" value="'+ option_id +'">';
         elementEdit.find('td:eq(3)').html(html);
@@ -359,7 +361,7 @@
             data: {
                 menu_id: id,
                 table_id: '<?php echo get('table_id'); ?>',
-                price: price,
+                price: newPrice,
                 comment: comment,
                 option_id: option_id,
                 order_id: order_id
@@ -384,28 +386,34 @@
         var name = $('#addModal .modal-title').text();
         var price = $('#addModal .price').text();
         var option_id = $('#addModal input[name="option"]:checked').attr('data-id');
+        var option_price = $('#addModal input[name="option"]:checked').attr('data-price');
+        // alert(option_price);
+        // console.log(option_price);
         var option = $('#addModal input[name="option"]:checked').attr('data-name');
         var comment = $('#addModal #comment').val();
         var print = '<a href="#" class="text-danger"><i class="fas fa-print"></i></a>';
+        var newPrice = (parseFloat(price) + parseFloat(option_price));
+        
         $.ajax({
         url: 'index.php?route=order/submitSingleOrder',
         type: 'POST',
         data: {
             menu_id: id,
             table_id: '<?php echo get('table_id'); ?>',
-            price: price,
+            price: newPrice,
             comment: comment,
             option_id: option_id
         },
         success: function(response) {
+            
             var newRow = '<tr data-toggle="modal" data-target="#editModal" menu-id="'+id+'" order-id="'+response+'" flag-confirm="0">' +
                         '<td>'+print+'</td>'+
                         '<td><div class="foodName">' + name + '</div>  <div class="comment">' + comment + '</div></td>' +
                         '<td><div class="optionText">' + (option ? option : '') + '</div></td>' +
-                        '<td><div class="price">' + price + '</div>'+
+                        '<td><div class="price">' + newPrice + '</div>'+
                         '<input type="hidden" name="menu_id[]" value="'+id+'">' +
                         '<input type="hidden" name="table_id[]" value="<?php echo get('table_id'); ?>">' +
-                        '<input type="hidden" name="price[]" value="'+ price +'">' +
+                        '<input type="hidden" name="price[]" value="'+ newPrice +'">' +
                         '<input type="hidden" name="comment[]" value="'+ comment +'">' +
                         '<input type="hidden" name="option_id[]" value="'+ option_id +'">' +
                         '</td>' +
@@ -571,7 +579,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('#checkBill-btn').click(function(e) {
     e.preventDefault();
-    
+    window.location = 'index.php?route=checkout&table_id=<?php echo get('table_id');?>';
     // Check if there are any rows with flag-confirm=0
     if ($('tbody tr[flag-confirm="0"]').length == 0) {
       // There are no rows with flag-confirm=0, so redirect the user immediately
@@ -579,46 +587,46 @@ $(document).ready(function() {
       return;
     }
     
-    // Initialize the counter variable
-    var numRequests = 0;
+    // // Initialize the counter variable
+    // var numRequests = 0;
     
-    $('tbody tr').each(function() {
-      if ($(this).attr('flag-confirm') == '0') {
-        // Get the data for this row
-        var menu_id = $(this).find('input[name="menu_id[]"]').val();
-        var table_id = $(this).find('input[name="table_id[]"]').val();
-        var price = $(this).find('input[name="price[]"]').val();
-        var comment = $(this).find('input[name="comment[]"]').val();
-        var option_id = $(this).find('input[name="option_id[]"]').val();
+    // $('tbody tr').each(function() {
+    //   if ($(this).attr('flag-confirm') == '0') {
+    //     // Get the data for this row
+    //     var menu_id = $(this).find('input[name="menu_id[]"]').val();
+    //     var table_id = $(this).find('input[name="table_id[]"]').val();
+    //     var price = $(this).find('input[name="price[]"]').val();
+    //     var comment = $(this).find('input[name="comment[]"]').val();
+    //     var option_id = $(this).find('input[name="option_id[]"]').val();
         
-        // Send the data using AJAX
-        $.ajax({
-          url: 'index.php?route=order/submitSingleOrder',
-          type: 'POST',
-          data: {
-            menu_id: menu_id,
-            table_id: table_id,
-            price: price,
-            comment: comment,
-            option_id: option_id
-          },
-          success: function(response) {
-            console.log(response);
-            // Increment the counter variable
-            numRequests++;
+    //     // Send the data using AJAX
+    //     $.ajax({
+    //       url: 'index.php?route=order/submitSingleOrder',
+    //       type: 'POST',
+    //       data: {
+    //         menu_id: menu_id,
+    //         table_id: table_id,
+    //         price: price,
+    //         comment: comment,
+    //         option_id: option_id
+    //       },
+    //       success: function(response) {
+    //         console.log(response);
+    //         // Increment the counter variable
+    //         numRequests++;
             
-            // Check if all requests have completed
-            if (numRequests == $('tbody tr[flag-confirm="0"]').length) {
-              // All requests have completed successfully, so redirect the user
-              window.location = 'index.php?route=checkout&table_id=<?php echo get('table_id');?>';
-            }
-          },
-          error: function() {
-            // Handle errors
-          }
-        });
-      }
-    });
+    //         // Check if all requests have completed
+    //         if (numRequests == $('tbody tr[flag-confirm="0"]').length) {
+    //           // All requests have completed successfully, so redirect the user
+    //           window.location = 'index.php?route=checkout&table_id=<?php echo get('table_id');?>';
+    //         }
+    //       },
+    //       error: function() {
+    //         // Handle errors
+    //       }
+    //     });
+    //   }
+    // });
   });
 });
 </script>

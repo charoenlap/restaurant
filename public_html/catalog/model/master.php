@@ -66,7 +66,7 @@
         }
         public function getOrderID($id=0){
             $result = array();
-            $sql = "SELECT *,res_order.id AS id,res_menu.id AS menu_id FROM res_order 
+            $sql = "SELECT *,res_order.id AS id,res_menu.id AS menu_id,res_order.price AS price FROM res_order 
             LEFT JOIN res_option ON res_order.option_id = res_option.id 
             LEFT JOIN res_menu ON res_menu.id = res_order.menu_id
             WHERE table_id = ".(int)$id." AND flag_checkout=0";
