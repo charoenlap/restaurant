@@ -378,8 +378,8 @@
     $('.add-order').click(function() {
     
         var text = $(this).data('toast-text');
-        $('.toast-text').text(text);
-        $('.toast').toast('show');
+        // $('.toast-text').text(text);
+        // $('.toast').toast('show');
         $('#addModal').modal('hide');
 
         var id = $('#addModal .modal-title').attr('menu-id');
