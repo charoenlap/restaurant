@@ -149,7 +149,7 @@
                         <div class="form-group">
                             <label for="comment">Comment:</label>
                             <textarea class="form-control comment" id="comment" rows="3"></textarea>
-                            <a href="#" class="btn btn-primary comment-btn-edit" data-text="ไม่ผัก">ไม่ผัก</a>
+                            <a href="#" class="btn btn-primary comment-btn-edit" data-text="ไม่ผักddd">ไม่ผักddd</a>
                         </div>
                     </div>
                 </div>
