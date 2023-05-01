@@ -48,6 +48,14 @@
             $result = $this->insert('order',$data);
             return $result;
         }
+        public function submitOrderEdit($data=array(),$id){
+            $result = array();
+            $result = $this->update('order',$data,'id='.$id);
+            return $result;
+        }
+        public function deleteOrder($id=0){
+            $this->delete('order','id='.$id);
+        }
         public function submitPrintOrder($table_id){
             $result = array();
             $update = array(
@@ -58,7 +66,7 @@
         }
         public function getOrderID($id=0){
             $result = array();
-            $sql = "SELECT * FROM res_order 
+            $sql = "SELECT *,res_order.id AS id,res_menu.id AS menu_id FROM res_order 
             LEFT JOIN res_option ON res_order.option_id = res_option.id 
             LEFT JOIN res_menu ON res_menu.id = res_order.menu_id
             WHERE table_id = ".(int)$id." AND flag_checkout=0";
@@ -77,6 +85,7 @@
                 LEFT JOIN res_menu ON res_order.menu_id = res_menu.id 
                 LEFT JOIN res_option ON res_order.option_id = res_option.id 
                 WHERE table_id = ".$table['table_id']." AND flag_confirm = 1 AND flag_printer = 0 AND flag_checkout = 0 ";
+                
                 $orders = $this->query($sql_order);
                 $result_order = array();
                 foreach($orders->rows as $order){

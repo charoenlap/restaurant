@@ -19,6 +19,15 @@
 	    	$data = array();
 			$this->view('print',$data); 
 	    }
+		public function deleteOrder() {
+	    	$data = array();
+			// $this->view('print',$data); 
+			if(method_post()){
+				$id = (int)post('order_id');
+				$this->model('master')->deleteOrder($id);
+			}
+	    }
+		
 		public function getMenu(){
 			$id = (int)get('menuId');
 			$result = $this->model('master')->getMenuID($id);
@@ -67,11 +76,33 @@
 						'flag_checkout'	=> 0,
 						'date_create'	=> date('Y-m-d H:i:s'),
 					);
-					$this->model('master')->submitOrder($insert);
+					$result = $this->model('master')->submitOrder($insert);
+					$this->model('master')->updateTable($data['table_id'],1);
+					echo $result;
+				// }
+			}
+		}
+		public function submitSingleOrderEdit(){
+			if(method_post()){
+				$data = $_POST;
+				// foreach($data['menu_id'] as $key => $val){
+					$insert = array(
+						'table_id'  => $data['table_id'],
+						'menu_id'	=> $data['menu_id'],
+						'option_id'	=> $data['option_id'],
+						'price'		=> $data['price'],
+						'comment'	=> $data['comment'],
+						'flag_confirm'	=> '0',
+						'flag_printer'	=> '0',
+						'flag_checkout'	=> '0',
+						'date_create'	=> date('Y-m-d H:i:s'),
+					);
+					$this->model('master')->submitOrderEdit($insert,$data['order_id']);
 					$this->model('master')->updateTable($data['table_id'],1);
 					echo "success";
 				// }
 			}
 		}
+		
 	}
 ?>

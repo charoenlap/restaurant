@@ -926,3 +926,48 @@
 2023-04-30 18:51:44 : update res_order set `flag_printer` = '1' WHERE id=40
 2023-04-30 18:51:45 : update res_order set `flag_printer` = '1' WHERE id=40
 2023-04-30 18:51:45 : update res_order set `flag_printer` = '1' WHERE id=40
+2023-05-01 16:06:39 : update res_order set `flag_confirm` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-05-01 16:06:39 : update res_order set `flag_confirm` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-05-01 16:48:01 : update res_order set `flag_confirm` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-05-01 16:48:08 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 16:48:18 : update res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '2', `price` = '9.99', `comment` = 'ไม่ผัก', flag_confirm = NULL, flag_printer = NULL, flag_checkout = NULL, `date_create` = '2023-05-01 16:48:18' WHERE id=36
+2023-05-01 16:48:18 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 16:48:28 : update res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '1', `price` = '9.99', `comment` = 'ไม่ผัก', flag_confirm = NULL, flag_printer = NULL, flag_checkout = NULL, `date_create` = '2023-05-01 16:48:28' WHERE id=36
+2023-05-01 16:48:28 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 16:48:49 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 16:49:14 : update res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '1', `price` = '9.99', `comment` = 'ไม่ผัก', flag_confirm = NULL, flag_printer = NULL, flag_checkout = NULL, `date_create` = '2023-05-01 16:49:14' WHERE id=37
+2023-05-01 16:49:14 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 16:49:54 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 16:55:57 : update res_order set `flag_confirm` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-05-01 16:56:05 : update res_order set `flag_confirm` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-05-01 16:57:15 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:12:03 : update res_order set `table_id` = '1', menu_id = NULL, option_id = NULL, `price` = '9.99', `comment` = 'ไม่ผัก ไม่ผัก', flag_confirm = NULL, flag_printer = NULL, flag_checkout = NULL, `date_create` = '2023-05-01 17:12:03' WHERE id=39
+2023-05-01 17:12:03 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:14:52 : update res_order set `table_id` = '1', `menu_id` = '38', option_id = NULL, `price` = '9.99', `comment` = 'te ไม่ผัก ไม่ผัก', flag_confirm = NULL, flag_printer = NULL, flag_checkout = NULL, `date_create` = '2023-05-01 17:14:52' WHERE id=38
+2023-05-01 17:14:52 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:15:02 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:15:29 : update res_order set `table_id` = '1', `menu_id` = '40', option_id = NULL, `price` = '9.99', `comment` = 't ไม่ผัก ไม่ผัก', flag_confirm = NULL, flag_printer = NULL, flag_checkout = NULL, `date_create` = '2023-05-01 17:15:29' WHERE id=40
+2023-05-01 17:15:29 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:16:49 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:17:07 : update res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '1', price = NULL, `comment` = 'ไม่ผัก', flag_confirm = NULL, flag_printer = NULL, flag_checkout = NULL, `date_create` = '2023-05-01 17:17:07' WHERE id=41
+2023-05-01 17:17:07 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:17:24 : update res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '2', price = NULL, `comment` = 'ไม่ผัก', flag_confirm = NULL, flag_printer = NULL, flag_checkout = NULL, `date_create` = '2023-05-01 17:17:24' WHERE id=41
+2023-05-01 17:17:24 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:18:12 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:18:28 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:19:15 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:20:39 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:25:20 : update res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '1', `price` = '9.99', `comment` = 'ไม่ผัก', flag_confirm = NULL, flag_printer = NULL, flag_checkout = NULL, `date_create` = '2023-05-01 17:25:20' WHERE id=45
+2023-05-01 17:25:20 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:26:16 : update res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '1', `price` = '9.99', `comment` = 'ไม่ผัก', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-01 17:26:16' WHERE id=45
+2023-05-01 17:26:16 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:26:22 : update res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '2', `price` = '9.99', `comment` = 'ไม่ผัก', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-01 17:26:22' WHERE id=45
+2023-05-01 17:26:22 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:26:32 : update res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '1', `price` = '9.99', `comment` = 'ไม่ผัก ไม่ผัก', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-01 17:26:32' WHERE id=45
+2023-05-01 17:26:32 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:28:57 : update res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '1', `price` = '9.99', `comment` = 'ไม่ผัก ไม่ผัก ไม่ผัก', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-01 17:28:57' WHERE id=45
+2023-05-01 17:28:57 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:34:04 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:34:21 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:34:35 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-01 17:35:59 : update res_table set `table_status` = '1' WHERE id=1
