@@ -1,3 +1,6 @@
 uploads/*
 uploads_file/*
 log_payment/*
+lib/log/*
+query_insert.txt
+query_update.txt
