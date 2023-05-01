@@ -10,7 +10,7 @@
         }
         public function getTable(){
             $result = array();
-            $result = $this->query("SELECT * FROM res_table");
+            $result = $this->query("SELECT * FROM res_table ORDER BY sort ASC");
             return $result;
         }
         public function getMenuID($id){

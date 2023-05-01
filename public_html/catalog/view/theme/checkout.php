@@ -202,10 +202,10 @@
                 var newRow = '<tr data-toggle="modal" data-target="#editModal" menu-id="'+value.menu_id+'" flag-confirm="'+value.flag_confirm+'">' +
                         '<td>' + value.name + '  <div>' + value.comment + '</div></td>' +
                         // '<td>' + value.option_name + '</td>' +
-                        '<td>' + value.price +
+                        '<td>' + parseInt(value.price) +
                         '<input type="hidden" name="menu_id[]" value="'+value.id+'">' +
                         '<input type="hidden" name="table_id[]" value="<?php echo get('table_id'); ?>">' +
-                        '<input type="hidden" name="price[]" value="'+ value.price +'">' +
+                        '<input type="hidden" name="price[]" value="'+ parseInt(value.price) +'">' +
                         '<input type="hidden" name="comment[]" value="'+ value.comment +'">' +
                         '<input type="hidden" name="option_id[]" value="'+ value.option_id +'">' +
                         '</td>' +
