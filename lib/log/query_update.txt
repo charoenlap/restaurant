@@ -998,3 +998,12 @@
 2023-05-02 13:39:41 : update res_table set `table_status` = '1' WHERE id=2
 2023-05-02 13:40:38 : update res_table set `table_status` = '1' WHERE id=2
 2023-05-02 13:44:34 : update res_table set `table_status` = '1' WHERE id=2
+2023-05-02 17:51:11 : update res_table set `table_status` = '1' WHERE id=18
+2023-05-02 17:52:05 : update res_order set `payment_id` = '90', `flag_checkout` = '1' WHERE table_id=18
+2023-05-02 17:52:05 : update res_table set table_status = NULL WHERE id=18
+2023-05-02 17:52:31 : update res_table set `table_status` = '1' WHERE id=18
+2023-05-02 17:52:34 : update res_order set `payment_id` = '91', `flag_checkout` = '1' WHERE table_id=18
+2023-05-02 17:52:34 : update res_table set table_status = NULL WHERE id=18
+2023-05-02 17:53:28 : update res_table set `table_status` = '1' WHERE id=18
+2023-05-02 17:55:57 : update res_order set `payment_id` = '92', `flag_checkout` = '1' WHERE table_id=18 AND payment_id = 0 AND flag_checkout = 0
+2023-05-02 17:55:57 : update res_table set table_status = NULL WHERE id=18
