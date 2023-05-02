@@ -317,7 +317,7 @@
         // Code to handle delete button click goes here
         $('#confirmModal').modal('hide');
         $('#editModal').modal('hide');
-         
+        order_id = parseInt($('#showOrderID').text());
         $.ajax({
             url: 'index.php?route=order/deleteOrder',
             type: 'POST',
