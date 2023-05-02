@@ -13,6 +13,7 @@
 		public function index() {
 	    	$data = array();
 			$data['category'] = $this->model('master')->getCategory();
+			$data['tables'] = $this->model('master')->getTableEmpty()->rows;
 			$this->view('order',$data); 
 	    }
 		public function print() {
@@ -27,7 +28,6 @@
 				$this->model('master')->deleteOrder($id);
 			}
 	    }
-		
 		public function getMenu(){
 			$id = (int)get('menuId');
 			$result = $this->model('master')->getMenuID($id);
@@ -101,6 +101,16 @@
 					$this->model('master')->updateTable($data['table_id'],1);
 					echo "success";
 				// }
+			}
+		}
+		public function changeTable(){
+			if(method_post()){
+				$data = $_POST;
+				$old_table_id = $data['old_table_id'];
+				$new_table_id = $data['new_table_id'];
+				$this->model('master')->changeTable($old_table_id,$new_table_id);
+				$this->model('master')->updateTable($old_table_id,0);
+				$this->model('master')->updateTable($new_table_id,1);
 			}
 		}
 		

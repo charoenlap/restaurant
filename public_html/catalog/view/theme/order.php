@@ -1,10 +1,13 @@
 <div class="container mt-4">
     <div class="row">
-        <div class="col-12 text-right">
-            <a href="" class="btn btn-primary" id="confirmCheckout">พิมพ์</a>
+        <div class="col-6 text-right">
+            <a href="" class="btn btn-warning btn-block" data-toggle="modal" data-target="#changeTableModal" id="changeTable">ย้ายโต๊ะ</a>
+        </div>
+        <div class="col-6 text-right">
+            <a href="" class="btn btn-primary btn-block" id="confirmCheckout">พิมพ์</a>
         </div>
     </div>
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-12">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <?php $i=0;foreach($category as $val){ ?>
@@ -80,7 +83,6 @@
         </div>
     </div>
 </div>
-
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="3000" style="position: absolute; top: 0; right: 0;">
     <div class="toast-header bg-success text-white">
         <strong class="mr-auto">Success</strong>
@@ -161,6 +163,29 @@
             <div class="modal-footer" style="display:block;">
                 <button type="button" class="btn btn-danger float-left delete-btn">ลบ</button>
                 <button type="button" class="btn btn-primary edit-order" style="float: right;">บันทึก</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="changeTableModal" tabindex="-1" role="dialog" aria-labelledby="changeTableModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changeTableModalLabel">ย้ายโต๊ะ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ย้ายที่โต๊ะ
+                <select class="form-control" id="changeToTable">
+                <?php foreach($tables as $table){?>
+                    <option value="<?php echo $table['id'];?>"><?php echo $table['table_name'];?></option>
+                <?php } ?>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="confirmChangeTable">ย้ายเลย</button>
             </div>
         </div>
     </div>
@@ -251,6 +276,26 @@
     }
 
 </style>
+<script>
+    $(document).on('click','#confirmChangeTable',function(e){
+        $.ajax({
+            url: 'index.php?route=order/changeTable',
+            type: 'POST',
+            data: {
+                old_table_id: '<?php echo get('table_id');?>',
+                new_table_id: $('#changeToTable').val(),
+            },
+            success: function(response) {
+                console.log(response);
+                // elementEdit.remove();
+                window.location='<?php echo route('home');?>';
+            },
+            error: function() {
+                // 
+            }
+        });
+    });
+</script>
 <script>
 
     var elementEdit = '';

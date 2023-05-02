@@ -22,6 +22,15 @@
             $result = $this->query("SELECT DATE(date_create) AS order_date, SUM(amount) AS total_amount FROM res_payment ".$where." GROUP BY DATE(date_create) ORDER BY order_date DESC");
             return $result;
         }
+        public function getTableEmpty(){
+            $result = array();
+            $result = $this->query("SELECT * FROM res_table WHERE (hide is null or hide=0) AND (table_status=0 or table_status is null) ORDER BY table_name ASC");
+            return $result;
+        }
+        public function changeTable($old_table_id=0,$new_table_id=0){
+            $sqlUpdate = "UPDATE res_order SET table_id='".(int)$new_table_id."' WHERE payment_id=0 AND table_id = ".(int)$old_table_id;
+            $this->query($sqlUpdate);
+        }
         public function getTableForReport(){
             $result = array();
             $result = $this->query("SELECT * FROM res_table WHERE hide is null or hide=0 ORDER BY table_name ASC");
