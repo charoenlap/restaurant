@@ -1,11 +1,13 @@
 <div class="container mb-4 pb-4">
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-6">
+            <p class="text-danger text-center" id="txtShowError"></p>
             <table class="table" id="tableList">
                 <tbody></tbody>
             </table>
         </div>
         <div class="col-6">
+            <p></p>
             <table class="table" id="tableSum">
                 <tbody>
                     <tr>
@@ -197,13 +199,14 @@
     });
 </script>
 <script>
+    var countCategory = 0;
     $(document).ready(function() {
         $.ajax({
         url: 'index.php?route=order/getOrder',
         method: 'GET',
         data: { table_id: <?php echo get('table_id');?> },
         success: function(response) {
-            // console.log(response);
+            console.log(response);
             $.each(response, function(key, value) {
                 var newRow = '<tr data-toggle="modal" data-target="#editModal" menu-id="'+value.menu_id+'" flag-confirm="'+value.flag_confirm+'">' +
                         '<td>' + value.name + '  <div>' + value.comment + '</div></td>' +
@@ -216,6 +219,9 @@
                         '<input type="hidden" name="option_id[]" value="'+ value.option_id +'">' +
                         '</td>' +
                         '</tr>';
+                if(value.category_id=='4'){
+                    countCategory++;
+                }
                 $('#tableList tbody').append(newRow);
                 var total = 0;
                 $('input[name="price[]"]').each(function() {
@@ -223,7 +229,9 @@
                 });
                 $('#total').text(total.toFixed(2));
             })
-            
+            if(countCategory==0){
+                $('#txtShowError').text('บิลนี้ไม่มีน้ำ');
+            }
         },
         error: function(xhr, status, error) {
             console.log(error);
