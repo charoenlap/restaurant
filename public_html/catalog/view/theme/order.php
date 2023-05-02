@@ -311,7 +311,7 @@
         $.ajax({
             url: 'index.php?route=order/deleteOrder',
             type: 'POST',
-            data: {
+            data: { 
                 order_id: order_id
             },
             success: function(response) {
