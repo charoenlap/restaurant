@@ -21,7 +21,7 @@
                 <div class="tab-pane fade <?php echo ($i==0?' show active':'');?>" id="panel-<?php echo $i;?>" role="tabpanel" aria-labelledby="tab-<?php echo $i;?>">
                     <div class="row">
                     <?php foreach($val['result_menu'] as $menu) { ?>
-                        <div class="col-xs-4">
+                        <div class="col-6">
                             <a href="#" class="btn btn-primary btn-block mb-2 add-menu" data-toggle="modal" data-target="#addModal" menu-id="<?php echo $menu['id'];?>"><?php echo $menu['name'];?></a>
                         </div>    
                     <?php } ?>
@@ -67,7 +67,7 @@
                         </div>
                         <div class="form-group">
                             <label for="comment">Comment:</label>
-                            <textarea class="form-control comment" id="comment" rows="3"></textarea>
+                            <textarea class="form-control comment mb-4" id="comment" rows="3"></textarea>
                             <a href="#" class="btn btn-primary comment-btn" data-text="ไม่ผัก">ไม่ผัก</a>
                             <a href="#" class="btn btn-primary comment-btn" data-text="ไม่ข้าว">ไม่ข้าว</a>
                             <a href="#" class="btn btn-primary comment-btn" data-text="ไม่เครื่องใน">ไม่เครื่องใน</a>
@@ -154,8 +154,12 @@
                         </div>
                         <div class="form-group">
                             <label for="comment">Comment:</label>
-                            <textarea class="form-control comment" id="comment" rows="3"></textarea>
-                            <a href="#" class="btn btn-primary comment-btn-edit" data-text="ไม่ผักddd">ไม่ผักddd</a>
+                            <textarea class="form-control comment mb-4" id="comment" rows="3"></textarea>
+                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่ผัก">ไม่ผัก</a>
+                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่ข้าว">ไม่ข้าว</a>
+                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่เครื่องใน">ไม่เครื่องใน</a>
+                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่กระเพาะ">ไม่กระเพาะ</a>
+                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่เลือด">ไม่เลือด</a>
                         </div>
                     </div>
                 </div>
@@ -191,6 +195,10 @@
     </div>
 </div>
 <style>
+    .comment-btn {
+        margin-bottom:10px;
+        margin-right:10px;
+    }
     .toast {
         display:none;
     }

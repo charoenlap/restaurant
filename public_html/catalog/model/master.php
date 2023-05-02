@@ -13,11 +13,11 @@
             $result = $this->query("SELECT * FROM res_table ORDER BY sort ASC");
             return $result;
         }
-        public function getSumPayment($date=''){
+        public function getSumPayment($month=0){
             $result = array();
             $where = ' WHERE id<>0 ';
-            if(!empty($date)){
-                $where = " AND date_create = '.$date.'";
+            if(!empty($month)){
+                $where .= " AND MONTH(date_create) = '".$month."'";
             }
             $result = $this->query("SELECT DATE(date_create) AS order_date, SUM(amount) AS total_amount FROM res_payment ".$where." GROUP BY DATE(date_create) ORDER BY order_date DESC");
             return $result;
@@ -36,9 +36,11 @@
             $result = $this->query("SELECT * FROM res_table WHERE hide is null or hide=0 ORDER BY table_name ASC");
             return $result;
         }
-        public function getOrderByPaymentID($payment_id){
+        public function getOrderByPaymentID($payment_id=0){
             $result = array();
-            $result = $this->query("SELECT * FROM res_order LEFT JOIN res_menu ON res_menu.id = res_order.menu_id WHERE payment_id = ".(int)$payment_id);
+            $sql = "SELECT * FROM res_order LEFT JOIN res_menu ON res_menu.id = res_order.menu_id WHERE payment_id = ".(int)$payment_id;
+            // echo $sql;
+            $result = $this->query($sql);
             return $result;
         }
         public function getHistory($table_id = 0){
@@ -150,7 +152,7 @@
                 'payment_id' =>  $payment_id,
                 'flag_checkout' => 1
             );
-            $result = $this->update('order',$update,'table_id='.$table_id);
+            $result = $this->update('order',$update,'table_id='.$table_id.' AND payment_id = 0 AND flag_checkout = 0');
             return $result;
         }
         public function updateTable($table_id=0,$status=0){

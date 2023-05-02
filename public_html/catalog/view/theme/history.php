@@ -55,7 +55,8 @@
         });
     });
     $('#orders-list').on('click', 'li', function(){
-        var payment_id = $(this).data('payment-id');
+        var payment_id = $(this).attr('data-payment-id');
+        console.log(payment_id+'<');
         $.ajax({
             url: 'index.php?route=report/getHistoryOrder',
             type: 'GET',

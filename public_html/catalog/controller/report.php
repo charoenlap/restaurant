@@ -2,7 +2,14 @@
 	class ReportController extends Controller {
         public function index(){
             $data = array(); 
-            $data['date_lists'] = $this->model('master')->getSumPayment()->rows;
+            $data['now_month'] = $now_month = (get('month')?get('month'):date('m'));
+            $year = date('Y');
+            for ($i = 1; $i <= 12; $i++) {
+                $monthName = date('F', mktime(0, 0, 0, $i, 1, $year));
+                $months[$i] = $monthName;
+              }
+            $data['date_lists'] = $this->model('master')->getSumPayment($now_month)->rows;
+            $data['months'] = $months;
 			$this->view('report',$data); 
 		}
 		public function history(){

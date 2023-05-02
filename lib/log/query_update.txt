@@ -998,9 +998,3 @@
 2023-05-02 13:39:41 : update res_table set `table_status` = '1' WHERE id=2
 2023-05-02 13:40:38 : update res_table set `table_status` = '1' WHERE id=2
 2023-05-02 13:44:34 : update res_table set `table_status` = '1' WHERE id=2
-2023-05-02 20:28:47 : update res_table set `table_status` = '1' WHERE id=10
-2023-05-02 20:29:03 : update res_table set `table_status` = '1' WHERE id=10
-2023-05-02 20:29:10 : update res_table set `table_status` = '1' WHERE id=10
-2023-05-02 20:29:21 : update res_table set `table_status` = '1' WHERE id=10
-2023-05-02 20:29:47 : update res_table set `table_status` = '1' WHERE id=10
-2023-05-02 20:31:46 : update res_table set `table_status` = '1' WHERE id=10
