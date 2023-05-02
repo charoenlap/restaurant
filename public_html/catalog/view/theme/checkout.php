@@ -102,9 +102,14 @@
                         <label for=""></label>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-center"><span  id="txttotalprice"></span> บาท</h3>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="clearOrderByQR">บันทึกชำระโดย QR Code</button>
+                <button type="button" class="btn btn-primary btn-block" id="clearOrderByQR">บันทึกชำระโดย QR Code</button>
             </div>
         </div>
     </div>
@@ -165,6 +170,7 @@
 </style>
 <script>
     $(document).on('click','#QRcode',function(e){
+        $('#txttotalprice').text(parseFloat($('#total').text()));
         $('#num-pad-input').val(parseFloat($('#total').text()));
         // $('#num-pad-input').change();
         var value = $('#num-pad-input').val();
