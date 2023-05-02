@@ -13,6 +13,15 @@
             $result = $this->query("SELECT * FROM res_table ORDER BY sort ASC");
             return $result;
         }
+        public function getSumPayment($date=''){
+            $result = array();
+            $where = ' WHERE id<>0 ';
+            if(!empty($date)){
+                $where = " AND date_create = '.$date.'";
+            }
+            $result = $this->query("SELECT DATE(date_create) AS order_date, SUM(amount) AS total_amount FROM res_payment ".$where." GROUP BY DATE(date_create) ORDER BY order_date DESC");
+            return $result;
+        }
         public function getTableForReport(){
             $result = array();
             $result = $this->query("SELECT * FROM res_table WHERE hide is null or hide=0 ORDER BY table_name ASC");
