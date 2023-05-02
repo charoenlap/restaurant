@@ -13,6 +13,21 @@
             $result = $this->query("SELECT * FROM res_table ORDER BY sort ASC");
             return $result;
         }
+        public function getTableForReport(){
+            $result = array();
+            $result = $this->query("SELECT * FROM res_table WHERE hide is null or hide=0 ORDER BY table_name ASC");
+            return $result;
+        }
+        public function getOrderByPaymentID($payment_id){
+            $result = array();
+            $result = $this->query("SELECT * FROM res_order LEFT JOIN res_menu ON res_menu.id = res_order.menu_id WHERE payment_id = ".(int)$payment_id);
+            return $result;
+        }
+        public function getHistory($table_id = 0){
+            $result = array();
+            $result = $this->query("SELECT * FROM res_payment WHERE table_id = ".(int)$table_id." ORDER BY id ASC");
+            return $result;
+        }
         public function getMenuID($id){
             $result = array();
             $result_menu = $this->query("SELECT * FROM res_menu WHERE id = ".(int)$id." LIMIT 0,1");

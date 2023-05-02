@@ -32,6 +32,9 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo route('home');?>">Home</a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="<?php echo route('report/history');?>">History</a>
+                    </li>
                 </ul>
             </div>
         </nav>

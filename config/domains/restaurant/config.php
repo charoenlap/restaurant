@@ -3,7 +3,8 @@
 	// ini_set("soap.wsdl_cache_enabled", "0");
 	
   	define('DEBUG_MODE',false);
-  	define('PRODUCTION',true);
+  	define('TYPE_LOCAL','win');
+	// define('TYPE_LOCAL','mac');
 
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
@@ -23,18 +24,29 @@
 		define('MURL','http://charoenlap.com/restaurant/');
 		define('PATH_JSON','/home/charoenlap/domains/charoenlap.com/public_html/restaurant/json/');
 	}else{
-		// Config DB localhost
-		define('PREFIX', 'res_');
-		define('DB_HOST','localhost');
-		define('DB_USER','root');
-		define('DB_PASS','root');
-		define('DB_DB','restaurant');
-		$base = $_SERVER['DOCUMENT_ROOT'].'/restaurant/public_html/';
-		// echo $_SERVER['DOCUMENT_ROOT'];exit();
-		define('DOCUMENT_ROOT','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/lib/');
-		define('DOCUMENT_ROOT_LINE','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/public_html/line/');
-		define('MURL','http://localhost/restaurant/public_html/');
-		define('PATH_JSON','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/json/');
+		if(TYPE_LOCAL=='win'){
+			define('PREFIX', 'res_');
+			define('DB_HOST','localhost');
+			define('DB_USER','root');
+			define('DB_PASS','root');
+			define('DB_DB','restaurant');
+			$base = $_SERVER['DOCUMENT_ROOT'].'/restaurant/public_html/';
+			define('DOCUMENT_ROOT','C:\MAMP\htdocs\restaurant\lib/');
+			define('DOCUMENT_ROOT_LINE','C:\MAMP\htdocs\restaurant\public_html/line/');
+			define('MURL','http://localhost/restaurant/public_html/');
+			define('PATH_JSON','C:\MAMP\htdocs\restaurant\json/');
+		}else{
+			define('PREFIX', 'res_');
+			define('DB_HOST','localhost');
+			define('DB_USER','root');
+			define('DB_PASS','root');
+			define('DB_DB','restaurant');
+			$base = $_SERVER['DOCUMENT_ROOT'].'/restaurant/public_html/';
+			define('DOCUMENT_ROOT','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/lib/');
+			define('DOCUMENT_ROOT_LINE','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/public_html/line/');
+			define('MURL','http://localhost/restaurant/public_html/');
+			define('PATH_JSON','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/json/');
+		}
 	}
 	// SCB
 	define('api_key','l73f905a88c166488ba74247d18a3cd5b4');
