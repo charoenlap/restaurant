@@ -312,7 +312,7 @@
         $('#editModal').modal('hide');
         $('#confirmModal').modal('show');
         // $('#showOrderID').text(order_id);
-    });
+    }); 
     $('#confirmDelete').click(function() {
         // Code to handle delete button click goes here
         $('#confirmModal').modal('hide');
