@@ -398,7 +398,7 @@
                     type: 'POST',
                     data: { 
                         table_id: '<?php echo get('table_id');?>',
-                        payment_id: '2',
+                        type_payment: '2',
                         amount: parseFloat($('#nettotal').text())
                     },
                     success: function(response) {
@@ -438,7 +438,7 @@
                     type: 'POST',
                     data: { 
                         table_id: '<?php echo get('table_id');?>',
-                        payment_id: '1',
+                        type_payment: '1',
                         amount: parseFloat($('#nettotal').text())
                     },
                     success: function(response) {
