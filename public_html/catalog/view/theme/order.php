@@ -104,7 +104,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                Are you sure you want to delete this item <span id="showOrderID"></span>?
+                Are you sure you want to delete this item <span id="showOrderID">-</span>?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -316,6 +316,7 @@
         // Code to handle delete button click goes here
         $('#confirmModal').modal('hide');
         $('#editModal').modal('hide');
+        $('#showOrderID').text(order_id);
         $.ajax({
             url: 'index.php?route=order/deleteOrder',
             type: 'POST',
@@ -324,7 +325,7 @@
             },
             success: function(response) {
                 // console.log(response);
-                $('#showOrderID').text(order_id);
+                
                 elementEdit.remove();
             },
             error: function() {
