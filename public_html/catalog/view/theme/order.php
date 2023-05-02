@@ -303,7 +303,6 @@
     $('.delete-btn').click(function() {
         $('#editModal').modal('hide');
         $('#confirmModal').modal('show');
-        $('#showOrderID').text(order_id);
     });
     $('#confirmDelete').click(function() {
         // Code to handle delete button click goes here
@@ -317,7 +316,7 @@
             },
             success: function(response) {
                 // console.log(response);
-                
+                $('#showOrderID').text(order_id);
                 elementEdit.remove();
             },
             error: function() {
