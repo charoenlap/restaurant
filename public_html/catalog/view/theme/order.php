@@ -5,7 +5,7 @@
         </div>
         <div class="col-6 text-right">
             <a href="" class="btn btn-primary btn-block" id="confirmCheckout">พิมพ์</a>
-        </div>
+        </div> 
     </div>
     <div class="row mt-4">
         <div class="col-12">
