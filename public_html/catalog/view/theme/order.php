@@ -311,12 +311,13 @@
     $('.delete-btn').click(function() {
         $('#editModal').modal('hide');
         $('#confirmModal').modal('show');
+        // $('#showOrderID').text(order_id);
     });
     $('#confirmDelete').click(function() {
         // Code to handle delete button click goes here
         $('#confirmModal').modal('hide');
         $('#editModal').modal('hide');
-        $('#showOrderID').text(order_id);
+        
         $.ajax({
             url: 'index.php?route=order/deleteOrder',
             type: 'POST',
@@ -339,6 +340,7 @@
         var optionText = $(this).find('td .optionText').text();
         var comment = $(this).find('td .comment').text().trim();
         order_id = elementEdit.attr('order-id');// order-id
+        $('#showOrderID').text(order_id);
         var price = $(this).find('td .price').text().trim();
         $('#editModal #comment').val(comment);
         $('#editModal #editFoodName').text(foodName);
