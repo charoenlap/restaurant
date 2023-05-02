@@ -104,7 +104,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                Are you sure you want to delete this item?
+                Are you sure you want to delete this item <span id="showOrderID"></span>?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -303,6 +303,7 @@
     $('.delete-btn').click(function() {
         $('#editModal').modal('hide');
         $('#confirmModal').modal('show');
+        $('#showOrderID').text(order_id);
     });
     $('#confirmDelete').click(function() {
         // Code to handle delete button click goes here
@@ -315,7 +316,8 @@
                 order_id: order_id
             },
             success: function(response) {
-                console.log(response);
+                // console.log(response);
+                
                 elementEdit.remove();
             },
             error: function() {
