@@ -100,10 +100,10 @@
             <div class="modal-body">
                 <ul class="nav nav-tabs" id="qrTabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="qrCodeTab" data-toggle="tab" href="#qrCode" role="tab" aria-controls="qrCode" aria-selected="true">QR Code</a>
+                        <a class="nav-link active" id="qrCodeTab" data-toggle="tab" href="#qrCode" role="tab" aria-controls="qrCode" aria-selected="true">กรุงเทพ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="qrImageTab" data-toggle="tab" href="#qrImage" role="tab" aria-controls="qrImage" aria-selected="false">QR Image</a>
+                        <a class="nav-link" id="qrImageTab" data-toggle="tab" href="#qrImage" role="tab" aria-controls="qrImage" aria-selected="false">กรุงไทย</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="qrTabContent">
