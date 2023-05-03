@@ -45,7 +45,7 @@
         }
         public function getHistory($table_id = 0){
             $result = array();
-            $result = $this->query("SELECT * FROM res_payment WHERE table_id = ".(int)$table_id." ORDER BY id ASC");
+            $result = $this->query("SELECT * FROM res_payment WHERE table_id = ".(int)$table_id." ORDER BY id DESC");
             return $result;
         }
         public function getMenuID($id){
