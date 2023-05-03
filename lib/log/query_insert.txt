@@ -248,3 +248,4 @@
 2023-05-03 09:28:32 : insert into res_order set `table_id` = '5', `menu_id` = '1', `option_id` = '9', `price` = '50', `comment` = '', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-03 09:28:32'
 2023-05-03 09:28:36 : insert into res_order set `table_id` = '5', `menu_id` = '16', `option_id` = '46', `price` = '10', `comment` = '', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-03 09:28:36'
 2023-05-03 09:48:28 : insert into res_payment set `type_payment` = '1', `table_id` = '5', `amount` = '60', `date_create` = '2023-05-03 09:48:28'
+2023-05-03 10:08:43 : insert into res_order set `table_id` = '4', `menu_id` = '26', `option_id` = '57', `price` = '60', `comment` = '', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-03 10:08:43'

@@ -1160,3 +1160,4 @@
 2023-05-03 09:28:36 : update res_table set `table_status` = '1' WHERE id=5
 2023-05-03 09:48:28 : update res_order set `payment_id` = '108', `flag_checkout` = '1' WHERE table_id=5 AND payment_id = 0 AND flag_checkout = 0
 2023-05-03 09:48:28 : update res_table set table_status = NULL WHERE id=5
+2023-05-03 10:08:43 : update res_table set `table_status` = '1' WHERE id=4
