@@ -98,9 +98,21 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-12">
+                <ul class="nav nav-tabs" id="qrTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="qrCodeTab" data-toggle="tab" href="#qrCode" role="tab" aria-controls="qrCode" aria-selected="true">QR Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="qrImageTab" data-toggle="tab" href="#qrImage" role="tab" aria-controls="qrImage" aria-selected="false">QR Image</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="qrTabContent">
+                    <div class="tab-pane fade show active" id="qrCode" role="tabpanel" aria-labelledby="qrCodeTab">
                         <img src="images/qr.jpg" class="img-fluid">
+                        <label for=""></label>
+                    </div>
+                    <div class="tab-pane fade" id="qrImage" role="tabpanel" aria-labelledby="qrImageTab">
+                        <img src="images/qr2.jpg" class="img-fluid">
                         <label for=""></label>
                     </div>
                 </div>
@@ -116,6 +128,7 @@
         </div>
     </div>
 </div>
+
 <style>
     #clearOrderByMoney {
         position: fixed;
