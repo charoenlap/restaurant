@@ -1,10 +1,13 @@
 <div class="container mt-4">
     <div class="row">
-        <div class="col-6 text-right">
-            <a href="" class="btn btn-warning btn-block" data-toggle="modal" data-target="#changeTableModal" id="changeTable">ย้ายโต๊ะ</a>
+        <div class="col-3">
+            <a href="#" class="btn">โต๊ะ <strong><?php echo $tableDetail['table_name'];?></strong></a>
+        </div>
+        <div class="col-3 text-right">
+            <a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#changeTableModal" id="changeTable">ย้ายโต๊ะ</a>
         </div>
         <div class="col-6 text-right">
-            <a href="" class="btn btn-primary btn-block" id="confirmCheckout">พิมพ์</a>
+            <a href="#" class="btn btn-primary btn-block" id="confirmCheckout">พิมพ์</a>
         </div> 
     </div>
     <div class="row mt-4">
@@ -22,7 +25,12 @@
                     <div class="row">
                     <?php foreach($val['result_menu'] as $menu) { ?>
                         <div class="col-6">
-                            <a href="#" class="btn btn-primary btn-block mb-2 add-menu" data-toggle="modal" data-target="#addModal" menu-id="<?php echo $menu['id'];?>"><?php echo $menu['name'];?></a>
+                            <?php if($menu['image']){ ?>
+                                <img src="uploads/<?php echo $menu['image'];?>" height="100" width="auto" alt="">
+                            <?php } ?>
+                            <a href="#" class="btn btn-primary btn-block mb-2 add-menu" data-toggle="modal" data-target="#addModal" menu-id="<?php echo $menu['id'];?>">
+                                <?php echo $menu['name'];?>
+                            </a>
                         </div>    
                     <?php } ?>
                     </div>
@@ -68,11 +76,7 @@
                         <div class="form-group">
                             <label for="comment">Comment:</label>
                             <textarea class="form-control comment mb-4" id="comment" rows="3"></textarea>
-                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่ผัก">ไม่ผัก</a>
-                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่ข้าว">ไม่ข้าว</a>
-                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่เครื่องใน">ไม่เครื่องใน</a>
-                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่กระเพาะ">ไม่กระเพาะ</a>
-                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่เลือด">ไม่เลือด</a>
+                            <div id="panelAddTags"></div>
                         </div>
                     </div>
                 </div>
@@ -155,11 +159,7 @@
                         <div class="form-group">
                             <label for="comment">Comment:</label>
                             <textarea class="form-control comment mb-4" id="comment" rows="3"></textarea>
-                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่ผัก">ไม่ผัก</a>
-                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่ข้าว">ไม่ข้าว</a>
-                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่เครื่องใน">ไม่เครื่องใน</a>
-                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่กระเพาะ">ไม่กระเพาะ</a>
-                            <a href="#" class="btn btn-primary comment-btn" data-text="ไม่เลือด">ไม่เลือด</a>
+                            <div id="panelEditTags"></div>
                         </div>
                     </div>
                 </div>
@@ -349,43 +349,43 @@
         // console.log('option>',option);
         // console.log(menuId);
         $.ajax({
-        url: 'index.php?route=order/getMenu',
-        method: 'GET',
-        data: { menuId: menuId },
-        success: function(response) {
-            console.log(response);
-            var menu = response;
-            var optionsHtml = '';
-            var i = 0;
-            $.each(menu.option, function(index, option) {
-                // console.log(option.option_name,option)
-                if(option.option_name==optionText){
-                optionsHtml += `
-                    <label class="btn btn-outline-primary active">
-                        <input type="radio" checked name="option" value="${option.id}" data-id="${option.id}" data-price="${option.price}" data-name="${option.option_name}">
-                        ${option.option_name} ${option.price}
-                    </label>
-                    `;
-                }else{
+            url: 'index.php?route=order/getMenu',
+            method: 'GET',
+            data: { menuId: menuId },
+            success: function(response) {
+                console.log(response);
+                var menu = response;
+                var optionsHtml = '';
+                var i = 0;
+                $.each(menu.option, function(index, option) {
+                    // console.log(option.option_name,option)
+                    if(option.option_name==optionText){
                     optionsHtml += `
-                    <label class="btn btn-outline-primary">
-                        <input type="radio" name="option" value="${option.id}" data-id="${option.id}" data-price="${option.price}" data-name="${option.option_name}">
-                        ${option.option_name} ${option.price}
-                    </label>
-                    `;
-                }
-                i++;
-            })
-            // alert(price);
-            $('#editModal .modal-title').attr('menu-id',menuId);
-            $('#editModal .price').text(price);
-            $('#editModal .options').html(optionsHtml);
-            $('#editModal .options input:eq(0)').prop('checked', true);
-        },
-        error: function(xhr, status, error) {
-            // Handle the error here
-            console.log(error);
-        }
+                        <label class="btn btn-outline-primary active">
+                            <input type="radio" checked name="option" value="${option.id}" data-id="${option.id}" data-price="${option.price}" data-name="${option.option_name}">
+                            ${option.option_name} ${option.price}
+                        </label>
+                        `;
+                    }else{
+                        optionsHtml += `
+                        <label class="btn btn-outline-primary">
+                            <input type="radio" name="option" value="${option.id}" data-id="${option.id}" data-price="${option.price}" data-name="${option.option_name}">
+                            ${option.option_name} ${option.price}
+                        </label>
+                        `;
+                    }
+                    i++;
+                })
+                // alert(price);
+                $('#editModal .modal-title').attr('menu-id',menuId);
+                $('#editModal .price').text(price);
+                $('#editModal .options').html(optionsHtml);
+                $('#editModal .options input:eq(0)').prop('checked', true);
+            },
+            error: function(xhr, status, error) {
+                // Handle the error here
+                console.log(error);
+            }
         });
     });
     $(document).on('click','.edit-order',function(e){
@@ -596,6 +596,23 @@ $(document).on('click','.add-menu',function(event) {
       error: function(xhr, status, error) {
         // Handle the error here
         console.log(error);
+      }
+    });
+    
+    $.ajax({
+      url: 'index.php?route=order/getListTagsMenuID',
+      method: 'GET',
+      data: { menuId: menuId },
+      success: function(response) {
+        $.each(response, function(index, value) { 
+            var html = '<a href="#" class="btn btn-primary comment-btn" data-text="'+value.tag_name+'">'+value.tag_name+'</a>';
+            $('#panelEditTags').append(html);
+            $('#panelAddTags').append(html);
+        })
+      },
+      error: function(xhr, status, error) {
+        // Handle the error here
+        console.log(xhr, status, error);
       }
     });
 });

@@ -12,7 +12,6 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img src="../uploads/gosportlogo.png" alt="" style="height:30px;"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,60 +19,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">หน้าหลัก <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo route('home');?>">หน้าหลัก <span class="sr-only">(current)</span></a>
       </li>
-      <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          มวย
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <?php foreach($muay as $val){ ?>
-            <a class="dropdown-item" href="<?php echo route('muay&id_content='.$val['id']);?>"><?php echo $val['title'];?></a>
-          <?php } ?>
-        </div>
-      </li> -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          ถ่ายทอดสด
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-           <?php foreach($kai as $val){ ?>
-            <a class="dropdown-item" href="<?php echo route('kai&id_content='.$val['id']);?>"><?php echo $val['title'];?></a>
-            <?php } ?>
-        </div>
+      <li class="nav-item ">
+        <a class="nav-link" href="<?php echo route('menu');?>">เมนู</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          เนื้อหา
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<?php echo route('news'); ?>">ข่าว</a>
-          <a class="dropdown-item" href="<?php echo route('replay'); ?>">ย้อนหลัง</a>
-          <a class="dropdown-item" href="<?php echo route('sponser'); ?>">Sponser</a>
-          <a class="dropdown-item" href="<?php echo route('marquee'); ?>">ตัววิ่ง</a>
-          <a class="dropdown-item" href="<?php echo route('news/editUnBanner'); ?>">แบนเนอร์สำรอง</a>
-        </div>
-      </li>
-      
-      
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          แพคเกจ
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<?php echo route('package'); ?>">ดูทั้งหมด</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="<?php echo route('package/add'); ?>">เพิ่ม</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          สมาชิก
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<?php echo route('member'); ?>">ดูทั้งหมด</a>
-          <a class="dropdown-item" href="<?php echo route('member/online'); ?>">Online</a>
-        </div>
+      <li class="nav-item ">
+        <a class="nav-link" href="<?php echo route('tags');?>">Tags</a>
       </li>
     </ul>
   </div>

@@ -13,6 +13,11 @@
             $result = $this->query("SELECT * FROM res_table ORDER BY sort ASC");
             return $result;
         }
+        public function getTableID($table=0){
+            $result = array();
+            $result = $this->query("SELECT * FROM res_table WHERE id = ".(int)$table." ORDER BY sort ASC");
+            return $result;
+        }
         public function getSumPayment($month=0){
             $result = array();
             $where = ' WHERE id<>0 ';
@@ -66,7 +71,8 @@
                     $result_menu[] = array(
                         'id' => $menu['id'],
                         'name' => $menu['name'],
-                        'price' => $menu['price']  
+                        'price' => $menu['price'],
+                        'image' => $menu['image']  
                     );
                 }
                 $result[] = array(
@@ -164,6 +170,12 @@
                 $result = $this->update('table',$update,'id='.$table_id);
             }
             return $result;
+        }
+        public function getListTagsMenuID($menu_id=0){
+            $result = array();
+            $sql = "SELECT * FROM res_tags LEFT JOIN res_order_tags ON res_order_tags.tags_id = res_tags.id WHERE menu_id = ".(int)$menu_id;
+            $result = $this->query($sql);
+            return $result->rows;
         }
 	}
 ?>

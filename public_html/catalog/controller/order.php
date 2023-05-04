@@ -12,10 +12,19 @@
 		}
 		public function index() {
 	    	$data = array();
+			$table_id = get('table_id');
+			$data['tableDetail'] = $this->model('master')->getTableID($table_id)->row;
 			$data['category'] = $this->model('master')->getCategory();
 			$data['tables'] = $this->model('master')->getTableEmpty()->rows;
 			$this->view('order',$data); 
 	    }
+		public function getListTagsMenuID(){
+			$menuId = (int)get('menuId');
+			if($menuId){
+				$tags = $this->model('master')->getListTagsMenuID($menuId);
+			}
+			$this->json($tags);
+		}
 		public function print() {
 	    	$data = array();
 			$this->view('print',$data); 
