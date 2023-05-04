@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container mt-4 mb-4">
     <div class="row">
         <div class="col-3">
             <a href="#" class="btn">โต๊ะ <strong><?php echo $tableDetail['table_name'];?></strong></a>
@@ -25,10 +25,10 @@
                     <div class="row">
                     <?php foreach($val['result_menu'] as $menu) { ?>
                         <div class="col-6">
-                            <?php if($menu['image']){ ?>
-                                <img src="uploads/<?php echo $menu['image'];?>" height="100" width="auto" alt="">
-                            <?php } ?>
                             <a href="#" class="btn btn-primary btn-block mb-2 add-menu" data-toggle="modal" data-target="#addModal" menu-id="<?php echo $menu['id'];?>">
+                                <?php if($menu['image']){ ?>
+                                    <img src="uploads/<?php echo $menu['image'];?>" height="100" width="auto" alt="">
+                                <?php } ?>
                                 <?php echo $menu['name'];?>
                             </a>
                         </div>    
