@@ -51,6 +51,10 @@
     var menu_id = 0; 
     $(document).ready(function() {
         $('tr').click(function() {
+            $('.btn-tags').removeClass('btn-primary');
+            $('.btn-tags').removeClass('btn-default');
+            $('.btn-tags').addClass('btn-default');
+            
             $('#myModal').modal('show');
             menu_id = $(this).attr('data-id');
             var menu_image = $(this).attr('data-image');
