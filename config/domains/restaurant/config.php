@@ -4,7 +4,7 @@
 	
   	define('DEBUG_MODE',false);
   	// define('TYPE_LOCAL','win');
-	define('TYPE_LOCAL','mac');
+	define('TYPE_LOCAL','win');
 
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);

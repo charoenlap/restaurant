@@ -604,6 +604,8 @@ $(document).on('click','.add-menu',function(event) {
       method: 'GET',
       data: { menuId: menuId },
       success: function(response) {
+        $('#panelEditTags').html('');
+        $('#panelAddTags').html('');
         $.each(response, function(index, value) { 
             var html = '<a href="#" class="btn btn-primary comment-btn" data-text="'+value.tag_name+'">'+value.tag_name+'</a>';
             $('#panelEditTags').append(html);

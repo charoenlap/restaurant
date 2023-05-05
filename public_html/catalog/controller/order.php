@@ -21,6 +21,7 @@
 	    }
 		public function getListTagsMenuID(){
 			$menuId = (int)get('menuId');
+			$tags = array();
 			if($menuId){
 				$tags = $this->model('master')->getListTagsMenuID($menuId);
 			}
