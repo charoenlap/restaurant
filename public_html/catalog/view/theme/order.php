@@ -26,9 +26,9 @@
                     <?php foreach($val['result_menu'] as $menu) { ?>
                         <div class="col-6">
                             <a href="#" class="btn btn-primary btn-block mb-2 add-menu" data-toggle="modal" data-target="#addModal" menu-id="<?php echo $menu['id'];?>">
-                                <?php if($menu['image']){ ?>
+                                <?php /*if($menu['image']){ ?>
                                     <img src="uploads/<?php echo $menu['image'];?>" height="100" width="auto" alt="">
-                                <?php } ?>
+                                <?php }*/ ?>
                                 <?php echo $menu['name'];?>
                             </a>
                         </div>    
