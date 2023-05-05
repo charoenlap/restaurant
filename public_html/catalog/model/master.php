@@ -147,6 +147,46 @@
             
             return $result;
         }
+        public function getOrdersPrinter($printer_name=''){
+            $result = array();
+            $where_printer = '';
+            if(!empty($printer_name)){
+                $where_printer = " AND printer_name = '".$printer_name."'";
+            }
+            $sql = "SELECT table_id,table_name,date_create FROM res_order 
+            LEFT JOIN res_menu ON res_order.menu_id = res_menu.id 
+            LEFT JOIN res_table ON res_order.table_id = res_table.id 
+            WHERE flag_confirm = 1  AND flag_printer = 0 AND flag_checkout = 0 ".$where_printer." GROUP BY table_id";
+            
+            $tables = $this->query($sql);
+            // var_dump($tables->rows);exit();
+            foreach($tables->rows as $table){
+                $sql_order = "SELECT *,res_order.id AS id FROM res_order 
+                LEFT JOIN res_menu ON res_order.menu_id = res_menu.id 
+                LEFT JOIN res_option ON res_order.option_id = res_option.id 
+                WHERE table_id = ".$table['table_id']." AND  flag_confirm = 1 AND flag_printer = 0 AND flag_checkout = 0 ".$where_printer;
+                
+                $orders = $this->query($sql_order);
+                $result_order = array();
+                foreach($orders->rows as $order){
+                    $result_order[] = array(
+                        'id'            => $order['id'],
+                        'menu_name'     => $order['name'],
+                        'option_name'   => $order['option_name'],
+                        'comment'       => $order['comment'],
+                        'printer_name'  => $order['printer_name']
+                    );
+                }
+                $result[] = array(
+                    'table_name'    => $table['table_name'],
+                    'date_create'   => $table['date_create'],
+                    'orders'        => $result_order
+                );
+            }
+            // var_dump($result);
+            
+            return $result;
+        }
         public function submitCheckout($data){
             $result = array();
             $result = $this->insert('payment',$data);

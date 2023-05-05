@@ -3,8 +3,8 @@
 	// ini_set("soap.wsdl_cache_enabled", "0");
 	
   	define('DEBUG_MODE',false);
-  	define('TYPE_LOCAL','win');
-	// define('TYPE_LOCAL','mac');
+  	// define('TYPE_LOCAL','win');
+	define('TYPE_LOCAL','mac');
 
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);

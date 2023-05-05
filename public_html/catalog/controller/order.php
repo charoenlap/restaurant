@@ -1,8 +1,9 @@
 <?php 
 	class OrderController extends Controller {
 		public function feedPrinter(){
-			$id = (int)get('table_id');
-			$result = $this->model('master')->getOrders();
+			// $id = (int)get('table_id');
+			$printer_name = get('printer_name');
+			$result = $this->model('master')->getOrdersPrinter($printer_name);
 			$this->json($result);
 		}
 		public function feedPrinterUpdate(){

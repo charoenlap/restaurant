@@ -1,3 +1,4 @@
 config/domains/restaurant/config.php
 lib/log/query_insert.txt
 lib/log/query_update.txt
+config/domains/restaurant/config.php
