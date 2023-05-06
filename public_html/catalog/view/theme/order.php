@@ -506,13 +506,13 @@
     $(document).on('click','.comment-btn',function() {
         var text = $(this).data('text');
         var comment = $('#addModal .comment').val();
-        comment += ' ' + text;
+        comment += ',' + text+' ';
         $('#addModal .comment').val(comment);
     });
     $(document).on('click','.comment-btn-edit',function() {
         var text = $(this).data('text');
         var comment = $('#editModal .comment').val();
-        comment += ' ' + text;
+        comment += ',' + text+' ';
         $('#editModal .comment').val(comment);
     });
 </script>
