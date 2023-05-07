@@ -2959,6 +2959,7 @@
 2023-05-06 11:34:42 : update res_table set `table_status` = '1' WHERE id=2
 2023-05-06 11:34:43 : update res_table set `table_status` = '1' WHERE id=2
 2023-05-06 11:34:43 : update res_order set `flag_confirm` = '1' WHERE  table_id = 2 AND payment_id=0
+
 2023-05-06 11:34:44 : update res_order set `flag_printer` = '1' WHERE id=1116
 2023-05-06 11:34:44 : update res_order set `flag_printer` = '1' WHERE id=1117
 2023-05-06 11:38:22 : update res_table set `table_status` = '1' WHERE id=3
@@ -3688,3 +3689,6 @@
 2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1374
 2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1375
 2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1376
+2023-05-07 10:06:31 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-07 10:07:26 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-07 10:09:38 : update res_table set `table_status` = '1' WHERE id=1
