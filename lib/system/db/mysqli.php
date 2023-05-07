@@ -252,11 +252,11 @@ class db{
 
 		$this->lastquery = $update;
 		$query = $this->db->query($update) or die($this->db->error.'<br>'.$update);
-
-		$fp = fopen(DOCUMENT_ROOT.'log/query_update.txt', 'a+');
-		fwrite($fp, date('Y-m-d H:i:s').' : '.$update.PHP_EOL);
-		fclose($fp);
-
+		if(OPEN_DB_LOG){
+			$fp = fopen(DOCUMENT_ROOT.'log/query_update.txt', 'a+');
+			fwrite($fp, date('Y-m-d H:i:s').' : '.$update.PHP_EOL);
+			fclose($fp);
+		}
 		// echo $update;
 		$result = ($query?true:false);
 	    return $result;
@@ -274,10 +274,11 @@ class db{
 		}
 		$this->lastquery = $insert;
 		$query = $this->db->query($insert) or die($this->db->error .'<br>'. $insert);
-
-		$fp = fopen(DOCUMENT_ROOT.'log/query_insert.txt', 'a+');
-		fwrite($fp, date('Y-m-d H:i:s').' : '.$insert.PHP_EOL);
-		fclose($fp);
+		if(OPEN_DB_LOG){
+			$fp = fopen(DOCUMENT_ROOT.'log/query_insert.txt', 'a+');
+			fwrite($fp, date('Y-m-d H:i:s').' : '.$insert.PHP_EOL);
+			fclose($fp);
+		}
 
 		if (!$this->db->errno) {
 			$result = ($query?$this->getLastId():false);

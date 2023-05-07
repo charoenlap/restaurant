@@ -11,6 +11,7 @@
 	error_reporting(E_ALL);
  
 	define('cache_db','0');
+	define('OPEN_DB_LOG','0');
 	if($_SERVER['SERVER_NAME'] != 'localhost'){
 		// Config DB SERVER
 		define('PREFIX', 'res_');
