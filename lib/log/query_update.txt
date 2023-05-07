@@ -2959,3 +2959,6 @@
 2023-05-06 11:34:42 : update res_table set `table_status` = '1' WHERE id=2
 2023-05-06 11:34:43 : update res_table set `table_status` = '1' WHERE id=2
 2023-05-06 11:34:43 : update res_order set `flag_confirm` = '1' WHERE  table_id = 2 AND payment_id=0
+2023-05-07 10:06:31 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-07 10:07:26 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-07 10:09:38 : update res_table set `table_status` = '1' WHERE id=1
