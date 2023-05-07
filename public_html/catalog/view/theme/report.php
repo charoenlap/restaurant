@@ -19,7 +19,7 @@
             <ul id="orders-list">
                 <?php foreach($date_lists as $val){ ?>
                 <li>
-                    <a href="#" class="order_date_detail" data-id="<?php echo $val['id'];?>" data-toggle="modal" data-target="#detailModal">
+                    <a href="#" class="order_date_detail" data-id="<?php echo $val['id'];?>" data-date="<?php echo $val['order_date'];?>" data-toggle="modal" data-target="#detailModal">
                         <?php echo $val['order_date'].' - '.$val['total_amount'];?>
                     </a>
                 </li>
@@ -50,10 +50,11 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
     $(document).on('click','.order_date_detail',function(e){
+        var date = $(this).attr('data-date');
         $.ajax({
             url: 'index.php?route=report/getOrderListCategory',
             method: 'GET',
-            data: { date: '<?php echo date('Y-m-d');?>' },
+            data: { date: date },
             success: function(response) {
                 console.log(response);
                 $('#list-order-detail').html('');
