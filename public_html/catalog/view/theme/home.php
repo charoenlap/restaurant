@@ -13,7 +13,7 @@
 </div>
 <script>
     $(document).ready(function() { 
-        setInterval(function() {
+        setInterval(function() { 
             $.ajax({
             url: 'index.php?route=home/getTable',
             method: 'GET',

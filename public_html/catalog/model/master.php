@@ -3,7 +3,7 @@
         public function updateOrderPrint($id=0){
             $result = array();
             $update = array(
-                'flag_printer' =>  1
+                'flag_printer' =>  1 
             );
             $result = $this->update('order',$update,'id='.$id);
             return $result; 
