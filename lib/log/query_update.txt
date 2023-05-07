@@ -3681,3 +3681,10 @@
 2023-05-07 10:10:39 : update res_table set `table_status` = '1' WHERE id=6
 2023-05-07 10:10:42 : update res_table set `table_status` = '1' WHERE id=6
 2023-05-07 10:10:43 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-07 10:10:45 : update res_order set `payment_id` = '347', `flag_checkout` = '1' WHERE table_id=8 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 10:10:45 : update res_table set table_status = NULL WHERE id=8
+2023-05-07 10:10:48 : update res_order set `flag_confirm` = '1' WHERE  table_id = 6 AND payment_id=0
+2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1373
+2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1374
+2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1375
+2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1376
