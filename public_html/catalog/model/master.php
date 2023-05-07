@@ -6,7 +6,7 @@
                 'flag_printer' =>  1
             );
             $result = $this->update('order',$update,'id='.$id);
-            return $result;
+            return $result; 
         }
         public function getTable(){
             $result = array();
