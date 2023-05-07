@@ -2959,6 +2959,736 @@
 2023-05-06 11:34:42 : update res_table set `table_status` = '1' WHERE id=2
 2023-05-06 11:34:43 : update res_table set `table_status` = '1' WHERE id=2
 2023-05-06 11:34:43 : update res_order set `flag_confirm` = '1' WHERE  table_id = 2 AND payment_id=0
+
+2023-05-06 11:34:44 : update res_order set `flag_printer` = '1' WHERE id=1116
+2023-05-06 11:34:44 : update res_order set `flag_printer` = '1' WHERE id=1117
+2023-05-06 11:38:22 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-06 11:38:24 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-06 11:38:30 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-06 11:38:31 : update res_order set `flag_confirm` = '1' WHERE  table_id = 3 AND payment_id=0
+2023-05-06 11:38:32 : update res_order set `flag_printer` = '1' WHERE id=1120
+2023-05-06 11:38:32 : update res_order set `flag_printer` = '1' WHERE id=1118
+2023-05-06 11:38:32 : update res_order set `flag_printer` = '1' WHERE id=1119
+2023-05-06 11:39:54 : update res_order set `payment_id` = '281', `flag_checkout` = '1' WHERE table_id=6 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 11:39:54 : update res_table set table_status = NULL WHERE id=6
+2023-05-06 11:40:20 : update res_table set `table_status` = '1' WHERE id=11
+2023-05-06 11:40:35 : update res_table set `table_status` = '1' WHERE id=11
+2023-05-06 11:40:36 : update res_order set `flag_confirm` = '1' WHERE  table_id = 11 AND payment_id=0
+2023-05-06 11:40:38 : update res_order set `flag_printer` = '1' WHERE id=1121
+2023-05-06 11:40:38 : update res_order set `flag_printer` = '1' WHERE id=1122
+2023-05-06 11:40:45 : update res_table set table_status = NULL WHERE id=3
+2023-05-06 11:40:45 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 11:43:20 : update res_order set `payment_id` = '282', `flag_checkout` = '1' WHERE table_id=4 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 11:43:20 : update res_table set table_status = NULL WHERE id=4
+2023-05-06 11:47:46 : update res_table set `table_status` = '1' WHERE id=7
+2023-05-06 11:47:54 : update res_order set `payment_id` = '283', `flag_checkout` = '1' WHERE table_id=5 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 11:47:54 : update res_table set table_status = NULL WHERE id=5
+2023-05-06 11:48:18 : update res_order set `payment_id` = '284', `flag_checkout` = '1' WHERE table_id=9 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 11:48:18 : update res_table set table_status = NULL WHERE id=9
+2023-05-06 11:48:24 : update res_order set `payment_id` = '285', `flag_checkout` = '1' WHERE table_id=9 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 11:48:24 : update res_table set table_status = NULL WHERE id=9
+2023-05-06 11:49:10 : update res_order set `payment_id` = '286', `flag_checkout` = '1' WHERE table_id=16 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 11:49:10 : update res_table set table_status = NULL WHERE id=16
+2023-05-06 11:51:20 : update res_order set `payment_id` = '287', `flag_checkout` = '1' WHERE table_id=2 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 11:51:20 : update res_table set table_status = NULL WHERE id=2
+2023-05-06 11:51:37 : update res_order set `payment_id` = '288', `flag_checkout` = '1' WHERE table_id=1 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 11:51:37 : update res_table set table_status = NULL WHERE id=1
+2023-05-06 11:51:47 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-06 11:51:49 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-06 11:51:53 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-06 11:51:54 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-06 11:51:55 : update res_order set `flag_confirm` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-05-06 11:51:57 : update res_order set `flag_printer` = '1' WHERE id=1124
+2023-05-06 11:51:57 : update res_order set `flag_printer` = '1' WHERE id=1125
+2023-05-06 11:51:58 : update res_order set `flag_printer` = '1' WHERE id=1126
+2023-05-06 11:51:58 : update res_order set `flag_printer` = '1' WHERE id=1127
+2023-05-06 11:52:39 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:52:50 : update res_order set `table_id` = '29', `menu_id` = '30', `option_id` = '70', `price` = '150', comment = NULL, `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:52:50' WHERE id=1128
+2023-05-06 11:52:50 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:52:54 : update res_order set `table_id` = '29', `menu_id` = '30', `option_id` = '66', `price` = '110', comment = NULL, `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:52:54' WHERE id=1128
+2023-05-06 11:52:54 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:52:57 : update res_order set `table_id` = '29', `menu_id` = '30', `option_id` = '65', `price` = '110', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:52:57' WHERE id=1128
+2023-05-06 11:52:57 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:53:39 : update res_order set `table_id` = '29', `menu_id` = '30', `option_id` = '69', `price` = '150', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:53:39' WHERE id=1128
+2023-05-06 11:53:39 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:53:45 : update res_order set `table_id` = '29', `menu_id` = '30', `option_id` = '65', `price` = '150', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:53:45' WHERE id=1128
+2023-05-06 11:53:45 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:53:54 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:53:58 : update res_order set `table_id` = '29', `menu_id` = '3', `option_id` = '2', `price` = '60', comment = NULL, `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:53:58' WHERE id=1129
+2023-05-06 11:53:58 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:54:02 : update res_order set `table_id` = '29', `menu_id` = '3', `option_id` = '3', `price` = '70', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:54:02' WHERE id=1129
+2023-05-06 11:54:02 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:54:12 : update res_order set `table_id` = '29', `menu_id` = '30', `option_id` = '66', `price` = '160', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:54:12' WHERE id=1128
+2023-05-06 11:54:12 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:55:12 : update res_order set `table_id` = '29', `menu_id` = '30', `option_id` = '65', `price` = '170', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:55:12' WHERE id=1128
+2023-05-06 11:55:12 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:57:10 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:57:14 : update res_order set `table_id` = '29', `menu_id` = '30', `option_id` = '66', `price` = '30', comment = NULL, `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:57:14' WHERE id=1130
+2023-05-06 11:57:14 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:57:18 : update res_order set `table_id` = '29', `menu_id` = '30', `option_id` = '65', `price` = '40', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:57:18' WHERE id=1130
+2023-05-06 11:57:18 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:57:28 : update res_order set `table_id` = '29', `menu_id` = '3', `option_id` = '2', `price` = '80', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:57:28' WHERE id=1129
+2023-05-06 11:57:28 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:57:33 : update res_table set `table_status` = '1' WHERE id=7
+2023-05-06 11:57:35 : update res_table set `table_status` = '1' WHERE id=7
+2023-05-06 11:58:01 : update res_order set `table_id` = '29', `menu_id` = '3', `option_id` = '3', `price` = '90', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:58:01' WHERE id=1129
+2023-05-06 11:58:01 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:58:06 : update res_order set `table_id` = '29', `menu_id` = '3', `option_id` = '1', `price` = '90', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:58:06' WHERE id=1129
+2023-05-06 11:58:06 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:58:11 : update res_order set `table_id` = '29', `menu_id` = '3', `option_id` = '4', `price` = '110', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:58:11' WHERE id=1129
+2023-05-06 11:58:11 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:58:15 : update res_order set `table_id` = '29', `menu_id` = '3', `option_id` = '3', `price` = '120', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 11:58:15' WHERE id=1129
+2023-05-06 11:58:15 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 11:58:39 : update res_order set `payment_id` = '289', `flag_checkout` = '1' WHERE table_id=7 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 11:58:39 : update res_table set table_status = NULL WHERE id=7
+2023-05-06 11:59:01 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 12:00:06 : update res_order set `payment_id` = '290', `flag_checkout` = '1' WHERE table_id=8 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:00:06 : update res_table set table_status = NULL WHERE id=8
+2023-05-06 12:00:40 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-06 12:04:40 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-06 12:04:41 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-06 12:05:26 : update res_table set `table_status` = '1' WHERE id=11
+2023-05-06 12:05:38 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-06 12:05:39 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-06 12:05:40 : update res_order set `flag_confirm` = '1' WHERE  table_id = 4 AND payment_id=0
+2023-05-06 12:05:41 : update res_order set `flag_printer` = '1' WHERE id=1135
+2023-05-06 12:05:41 : update res_order set `flag_printer` = '1' WHERE id=1136
+2023-05-06 12:05:41 : update res_order set `flag_printer` = '1' WHERE id=1138
+2023-05-06 12:05:41 : update res_order set `flag_printer` = '1' WHERE id=1139
+2023-05-06 12:06:00 : update res_table set `table_status` = '1' WHERE id=7
+2023-05-06 12:06:24 : update res_table set `table_status` = '1' WHERE id=7
+2023-05-06 12:06:25 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-06 12:06:25 : update res_table set `table_status` = '1' WHERE id=7
+2023-05-06 12:06:26 : update res_table set `table_status` = '1' WHERE id=7
+2023-05-06 12:06:27 : update res_order set `flag_confirm` = '1' WHERE  table_id = 7 AND payment_id=0
+2023-05-06 12:06:28 : update res_order set `flag_printer` = '1' WHERE id=1140
+2023-05-06 12:06:28 : update res_order set `flag_printer` = '1' WHERE id=1141
+2023-05-06 12:06:28 : update res_order set `flag_printer` = '1' WHERE id=1143
+2023-05-06 12:06:28 : update res_order set `flag_printer` = '1' WHERE id=1144
+2023-05-06 12:06:30 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-06 12:06:33 : update res_order set `flag_confirm` = '1' WHERE  table_id = 10 AND payment_id=0
+2023-05-06 12:06:33 : update res_order set `flag_printer` = '1' WHERE id=1142
+2023-05-06 12:06:34 : update res_order set `flag_printer` = '1' WHERE id=1145
+2023-05-06 12:08:30 : update res_order set `payment_id` = '291', `flag_checkout` = '1' WHERE table_id=11 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:08:30 : update res_table set table_status = NULL WHERE id=11
+2023-05-06 12:08:57 : update res_table set `table_status` = '1' WHERE id=9
+2023-05-06 12:08:59 : update res_table set `table_status` = '1' WHERE id=9
+2023-05-06 12:09:07 : update res_table set `table_status` = '1' WHERE id=9
+2023-05-06 12:09:09 : update res_order set `flag_confirm` = '1' WHERE  table_id = 9 AND payment_id=0
+2023-05-06 12:09:11 : update res_order set `flag_printer` = '1' WHERE id=1146
+2023-05-06 12:09:11 : update res_order set `flag_printer` = '1' WHERE id=1147
+2023-05-06 12:09:11 : update res_order set `flag_printer` = '1' WHERE id=1148
+2023-05-06 12:09:54 : update res_order set `payment_id` = '292', `flag_checkout` = '1' WHERE table_id=1 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:09:54 : update res_table set table_status = NULL WHERE id=1
+2023-05-06 12:10:05 : update res_table set `table_status` = '1' WHERE id=2
+2023-05-06 12:10:13 : update res_table set `table_status` = '1' WHERE id=2
+2023-05-06 12:10:26 : update res_table set `table_status` = '1' WHERE id=2
+2023-05-06 12:10:27 : update res_table set `table_status` = '1' WHERE id=2
+2023-05-06 12:10:28 : update res_order set `flag_confirm` = '1' WHERE  table_id = 2 AND payment_id=0
+2023-05-06 12:10:29 : update res_order set `flag_printer` = '1' WHERE id=1151
+2023-05-06 12:10:29 : update res_order set `flag_printer` = '1' WHERE id=1152
+2023-05-06 12:10:30 : update res_order set `flag_printer` = '1' WHERE id=1149
+2023-05-06 12:10:30 : update res_order set `flag_printer` = '1' WHERE id=1150
+2023-05-06 12:10:38 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 12:10:40 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 12:10:40 : update res_order set `flag_confirm` = '1' WHERE  table_id = 8 AND payment_id=0
+2023-05-06 12:10:41 : update res_order set `flag_printer` = '1' WHERE id=1153
+2023-05-06 12:10:41 : update res_order set `flag_printer` = '1' WHERE id=1154
+2023-05-06 12:12:28 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-06 12:13:52 : update res_table set `table_status` = '1' WHERE id=9
+2023-05-06 12:14:05 : update res_order set `flag_confirm` = '1' WHERE  table_id = 9 AND payment_id=0
+2023-05-06 12:14:06 : update res_order set `flag_printer` = '1' WHERE id=1156
+2023-05-06 12:14:13 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-06 12:14:29 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-06 12:14:30 : update res_order set `flag_confirm` = '1' WHERE  table_id = 5 AND payment_id=0
+2023-05-06 12:14:31 : update res_order set `flag_printer` = '1' WHERE id=1157
+2023-05-06 12:14:31 : update res_order set `flag_printer` = '1' WHERE id=1158
+2023-05-06 12:16:01 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-06 12:16:21 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-06 12:16:38 : update res_order set `table_id` = '3', `menu_id` = '7', `option_id` = '27', `price` = '70', `comment` = 'เผ็ดน้อย', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 12:16:38' WHERE id=1159
+2023-05-06 12:16:38 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-06 12:16:45 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-06 12:16:49 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-06 12:16:56 : update res_order set `flag_confirm` = '1' WHERE  table_id = 3 AND payment_id=0
+2023-05-06 12:16:57 : update res_order set `flag_printer` = '1' WHERE id=1160
+2023-05-06 12:16:58 : update res_order set `flag_printer` = '1' WHERE id=1159
+2023-05-06 12:22:53 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-06 12:23:05 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-06 12:23:06 : update res_order set `flag_confirm` = '1' WHERE  table_id = 27 AND payment_id=0
+2023-05-06 12:23:07 : update res_order set `flag_printer` = '1' WHERE id=1163
+2023-05-06 12:23:07 : update res_order set `flag_printer` = '1' WHERE id=1164
+2023-05-06 12:27:45 : update res_table set `table_status` = '1' WHERE id=9
+2023-05-06 12:28:22 : update res_order set `payment_id` = '293', `flag_checkout` = '1' WHERE table_id=10 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:28:22 : update res_table set table_status = NULL WHERE id=10
+2023-05-06 12:28:33 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-06 12:28:34 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-06 12:28:56 : update res_order set `payment_id` = '294', `flag_checkout` = '1' WHERE table_id=4 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:28:56 : update res_table set table_status = NULL WHERE id=4
+2023-05-06 12:29:42 : update res_order set `payment_id` = '295', `flag_checkout` = '1' WHERE table_id=9 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:29:42 : update res_table set table_status = NULL WHERE id=9
+2023-05-06 12:32:34 : update res_order set `payment_id` = '296', `flag_checkout` = '1' WHERE table_id=7 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:32:34 : update res_table set table_status = NULL WHERE id=7
+2023-05-06 12:33:45 : update res_order set `payment_id` = '297', `flag_checkout` = '1' WHERE table_id=27 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:33:45 : update res_table set table_status = NULL WHERE id=27
+2023-05-06 12:35:12 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 12:35:31 : update res_order set `payment_id` = '298', `flag_checkout` = '1' WHERE table_id=8 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:35:31 : update res_table set table_status = NULL WHERE id=8
+2023-05-06 12:36:02 : update res_table set `table_status` = '1' WHERE id=2
+2023-05-06 12:36:16 : update res_order set `payment_id` = '299', `flag_checkout` = '1' WHERE table_id=2 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:36:16 : update res_table set table_status = NULL WHERE id=2
+2023-05-06 12:39:55 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-06 12:40:15 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-06 12:40:54 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-06 12:42:05 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-06 12:42:06 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-06 12:42:15 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-06 12:42:19 : update res_order set `flag_confirm` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-05-06 12:42:19 : update res_order set `flag_printer` = '1' WHERE id=1175
+2023-05-06 12:42:22 : update res_order set `flag_printer` = '1' WHERE id=1173
+2023-05-06 12:42:22 : update res_order set `flag_printer` = '1' WHERE id=1174
+2023-05-06 12:43:50 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-06 12:43:52 : update res_order set `flag_confirm` = '1' WHERE  table_id = 28 AND payment_id=0
+2023-05-06 12:43:53 : update res_order set `flag_printer` = '1' WHERE id=1176
+2023-05-06 12:44:15 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-06 12:44:23 : update res_order set `payment_id` = '300', `flag_checkout` = '1' WHERE table_id=5 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:44:23 : update res_table set table_status = NULL WHERE id=5
+2023-05-06 12:44:29 : update res_order set `payment_id` = '301', `flag_checkout` = '1' WHERE table_id=27 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:44:29 : update res_table set table_status = NULL WHERE id=27
+2023-05-06 12:51:23 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-06 12:52:32 : update res_order set `payment_id` = '302', `flag_checkout` = '1' WHERE table_id=28 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:52:32 : update res_table set table_status = NULL WHERE id=28
+2023-05-06 12:52:50 : update res_order set `payment_id` = '303', `flag_checkout` = '1' WHERE table_id=3 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 12:52:50 : update res_table set table_status = NULL WHERE id=3
+2023-05-06 12:53:16 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-06 12:53:19 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-06 12:53:22 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-06 12:53:23 : update res_order set `flag_confirm` = '1' WHERE  table_id = 4 AND payment_id=0
+2023-05-06 12:53:25 : update res_order set `flag_printer` = '1' WHERE id=1179
+2023-05-06 12:53:25 : update res_order set `flag_printer` = '1' WHERE id=1180
+2023-05-06 12:53:25 : update res_order set `flag_printer` = '1' WHERE id=1181
+2023-05-06 12:53:32 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:53:35 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:53:38 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:53:40 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:53:45 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:53:47 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:53:53 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:53:56 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:54:01 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:54:05 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:54:22 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:54:46 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:54:48 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:54:49 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:54:50 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:55:06 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:55:10 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 12:55:34 : update res_order set `flag_confirm` = '1' WHERE  table_id = 6 AND payment_id=0
+2023-05-06 12:55:37 : update res_order set `flag_printer` = '1' WHERE id=1182
+2023-05-06 12:55:37 : update res_order set `flag_printer` = '1' WHERE id=1183
+2023-05-06 12:55:37 : update res_order set `flag_printer` = '1' WHERE id=1184
+2023-05-06 12:55:37 : update res_order set `flag_printer` = '1' WHERE id=1185
+2023-05-06 12:55:37 : update res_order set `flag_printer` = '1' WHERE id=1186
+2023-05-06 12:55:37 : update res_order set `flag_printer` = '1' WHERE id=1187
+2023-05-06 12:55:37 : update res_order set `flag_printer` = '1' WHERE id=1193
+2023-05-06 12:55:37 : update res_order set `flag_printer` = '1' WHERE id=1194
+2023-05-06 12:55:38 : update res_order set `flag_printer` = '1' WHERE id=1195
+2023-05-06 12:55:38 : update res_order set `flag_printer` = '1' WHERE id=1196
+2023-05-06 12:55:38 : update res_order set `flag_printer` = '1' WHERE id=1197
+2023-05-06 12:55:38 : update res_order set `flag_printer` = '1' WHERE id=1188
+2023-05-06 12:55:38 : update res_order set `flag_printer` = '1' WHERE id=1189
+2023-05-06 12:55:38 : update res_order set `flag_printer` = '1' WHERE id=1190
+2023-05-06 12:55:39 : update res_order set `flag_printer` = '1' WHERE id=1191
+2023-05-06 12:55:39 : update res_order set `flag_printer` = '1' WHERE id=1192
+2023-05-06 12:55:39 : update res_order set `flag_printer` = '1' WHERE id=1198
+2023-05-06 12:59:34 : update res_order set `table_id` = '6', `menu_id` = '1', `option_id` = '10', `price` = '60', comment = NULL, `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 12:59:34' WHERE id=1187
+2023-05-06 12:59:34 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:00:07 : update res_order set `flag_confirm` = '1' WHERE  table_id = 6 AND payment_id=0
+2023-05-06 13:00:09 : update res_order set `flag_printer` = '1' WHERE id=1187
+2023-05-06 13:03:26 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-06 13:04:01 : update res_order set `payment_id` = '304', `flag_checkout` = '1' WHERE table_id=1 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 13:04:01 : update res_table set table_status = NULL WHERE id=1
+2023-05-06 13:06:23 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:07:02 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:07:06 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:07:14 : update res_order set `flag_confirm` = '1' WHERE  table_id = 6 AND payment_id=0
+2023-05-06 13:07:15 : update res_order set `flag_printer` = '1' WHERE id=1200
+2023-05-06 13:07:15 : update res_order set `flag_printer` = '1' WHERE id=1201
+2023-05-06 13:07:16 : update res_order set `flag_printer` = '1' WHERE id=1202
+2023-05-06 13:08:06 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-06 13:08:08 : update res_order set `flag_confirm` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-05-06 13:08:10 : update res_order set `flag_printer` = '1' WHERE id=1203
+2023-05-06 13:10:35 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:11:42 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-06 13:12:17 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-06 13:12:26 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-06 13:12:27 : update res_order set `flag_confirm` = '1' WHERE  table_id = 5 AND payment_id=0
+2023-05-06 13:12:29 : update res_order set `flag_printer` = '1' WHERE id=1206
+2023-05-06 13:12:29 : update res_order set `flag_printer` = '1' WHERE id=1205
+2023-05-06 13:12:30 : update res_order set `flag_printer` = '1' WHERE id=1207
+2023-05-06 13:14:29 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:14:30 : update res_order set `flag_confirm` = '1' WHERE  table_id = 6 AND payment_id=0
+2023-05-06 13:14:31 : update res_order set `flag_printer` = '1' WHERE id=1204
+2023-05-06 13:14:32 : update res_order set `flag_printer` = '1' WHERE id=1208
+2023-05-06 13:15:18 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:15:51 : update res_order set `payment_id` = '305', `flag_checkout` = '1' WHERE table_id=4 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 13:15:51 : update res_table set table_status = NULL WHERE id=4
+2023-05-06 13:22:22 : update res_order set `payment_id` = '306', `flag_checkout` = '1' WHERE table_id=1 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 13:22:22 : update res_table set table_status = NULL WHERE id=1
+2023-05-06 13:23:56 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-06 13:23:57 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-06 13:23:58 : update res_order set `flag_confirm` = '1' WHERE  table_id = 4 AND payment_id=0
+2023-05-06 13:24:00 : update res_order set `flag_printer` = '1' WHERE id=1210
+2023-05-06 13:24:00 : update res_order set `flag_printer` = '1' WHERE id=1211
+2023-05-06 13:28:27 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:28 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:29 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:30 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:32 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:32 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:34 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:34 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:35 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:36 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:37 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:39 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:28:40 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-06 13:29:17 : update res_order set `payment_id` = '307', `flag_checkout` = '1' WHERE table_id=6 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 13:29:17 : update res_table set table_status = NULL WHERE id=6
+2023-05-06 13:41:23 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-06 13:41:26 : update res_order set `flag_confirm` = '1' WHERE  table_id = 5 AND payment_id=0
+2023-05-06 13:41:28 : update res_order set `flag_printer` = '1' WHERE id=1225
+2023-05-06 13:41:53 : update res_order set `payment_id` = '308', `flag_checkout` = '1' WHERE table_id=5 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 13:41:53 : update res_table set table_status = NULL WHERE id=5
+2023-05-06 13:50:04 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-06 13:50:07 : update res_order set `flag_confirm` = '1' WHERE  table_id = 27 AND payment_id=0
+2023-05-06 13:50:08 : update res_order set `flag_printer` = '1' WHERE id=1226
+2023-05-06 13:55:04 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-06 13:55:05 : update res_order set `flag_confirm` = '1' WHERE  table_id = 27 AND payment_id=0
+2023-05-06 13:55:07 : update res_order set `flag_printer` = '1' WHERE id=1227
+2023-05-06 14:02:51 : update res_order set `payment_id` = '309', `flag_checkout` = '1' WHERE table_id=27 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 14:02:51 : update res_table set table_status = NULL WHERE id=27
+2023-05-06 14:03:02 : update res_order set `payment_id` = '310', `flag_checkout` = '1' WHERE table_id=4 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 14:03:02 : update res_table set table_status = NULL WHERE id=4
+2023-05-06 14:16:12 : update res_table set `table_status` = '1' WHERE id=2
+2023-05-06 14:16:12 : update res_order set `flag_confirm` = '1' WHERE  table_id = 2 AND payment_id=0
+2023-05-06 14:16:14 : update res_order set `flag_printer` = '1' WHERE id=1228
+2023-05-06 14:31:58 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:32:11 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:32:16 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:32:21 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:32:22 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:32:37 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:32:48 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-06 14:32:50 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-06 14:32:53 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-06 14:32:54 : update res_order set `flag_confirm` = '1' WHERE  table_id = 16 AND payment_id=0
+2023-05-06 14:32:55 : update res_order set `flag_printer` = '1' WHERE id=1235
+2023-05-06 14:32:56 : update res_order set `flag_printer` = '1' WHERE id=1236
+2023-05-06 14:32:56 : update res_order set `flag_printer` = '1' WHERE id=1237
+2023-05-06 14:33:01 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:34:15 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:34:17 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:34:38 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:34:39 : update res_order set `flag_confirm` = '1' WHERE  table_id = 8 AND payment_id=0
+2023-05-06 14:34:40 : update res_order set `flag_printer` = '1' WHERE id=1229
+2023-05-06 14:34:40 : update res_order set `flag_printer` = '1' WHERE id=1230
+2023-05-06 14:34:40 : update res_order set `flag_printer` = '1' WHERE id=1231
+2023-05-06 14:34:40 : update res_order set `flag_printer` = '1' WHERE id=1239
+2023-05-06 14:34:40 : update res_order set `flag_printer` = '1' WHERE id=1240
+2023-05-06 14:34:41 : update res_order set `flag_printer` = '1' WHERE id=1232
+2023-05-06 14:34:41 : update res_order set `flag_printer` = '1' WHERE id=1233
+2023-05-06 14:34:41 : update res_order set `flag_printer` = '1' WHERE id=1234
+2023-05-06 14:34:41 : update res_order set `flag_printer` = '1' WHERE id=1238
+2023-05-06 14:34:41 : update res_order set `flag_printer` = '1' WHERE id=1241
+2023-05-06 14:35:40 : update res_order set `payment_id` = '311', `flag_checkout` = '1' WHERE table_id=2 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 14:35:40 : update res_table set table_status = NULL WHERE id=2
+2023-05-06 14:35:49 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-06 14:35:51 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-06 14:35:55 : update res_order set `flag_confirm` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-05-06 14:35:56 : update res_order set `flag_printer` = '1' WHERE id=1243
+2023-05-06 14:35:56 : update res_order set `flag_printer` = '1' WHERE id=1242
+2023-05-06 14:45:27 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:45:37 : update res_order set `table_id` = '8', `menu_id` = '1', `option_id` = '9', `price` = '50', `comment` = 'ไม่เอาตับไม่เอาผัก', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 14:45:37' WHERE id=1244
+2023-05-06 14:45:37 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 14:45:44 : update res_order set `flag_confirm` = '1' WHERE  table_id = 8 AND payment_id=0
+2023-05-06 14:45:46 : update res_order set `flag_printer` = '1' WHERE id=1244
+2023-05-06 14:46:09 : update res_order set `payment_id` = '312', `flag_checkout` = '1' WHERE table_id=16 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 14:46:09 : update res_table set table_status = NULL WHERE id=16
+2023-05-06 14:46:14 : update res_table set `table_status` = '1' WHERE id=13
+2023-05-06 14:46:15 : update res_table set `table_status` = '1' WHERE id=13
+2023-05-06 14:46:19 : update res_table set `table_status` = '1' WHERE id=13
+2023-05-06 14:46:35 : update res_table set `table_status` = '1' WHERE id=13
+2023-05-06 14:46:48 : update res_order set `table_id` = '13', `menu_id` = '25', `option_id` = '55', `price` = '80', `comment` = 'หมูกรอบ เผ็ดมากๆ', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-06 14:46:48' WHERE id=1248
+2023-05-06 14:46:48 : update res_table set `table_status` = '1' WHERE id=13
+2023-05-06 14:46:51 : update res_order set `flag_confirm` = '1' WHERE  table_id = 13 AND payment_id=0
+2023-05-06 14:46:52 : update res_order set `flag_printer` = '1' WHERE id=1245
+2023-05-06 14:46:52 : update res_order set `flag_printer` = '1' WHERE id=1246
+2023-05-06 14:46:52 : update res_order set `flag_printer` = '1' WHERE id=1247
+2023-05-06 14:46:53 : update res_order set `flag_printer` = '1' WHERE id=1248
+2023-05-06 14:55:12 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-06 15:02:01 : update res_order set `payment_id` = '313', `flag_checkout` = '1' WHERE table_id=1 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 15:02:01 : update res_table set table_status = NULL WHERE id=1
+2023-05-06 15:09:04 : update res_order set `payment_id` = '314', `flag_checkout` = '1' WHERE table_id=8 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 15:09:04 : update res_table set table_status = NULL WHERE id=8
+2023-05-06 15:09:46 : update res_order set `payment_id` = '315', `flag_checkout` = '1' WHERE table_id=13 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 15:09:46 : update res_table set table_status = NULL WHERE id=13
+2023-05-06 15:12:59 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-06 15:25:34 : update res_order set `payment_id` = '316', `flag_checkout` = '1' WHERE table_id=27 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 15:25:34 : update res_table set table_status = NULL WHERE id=27
+2023-05-06 15:44:44 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-06 15:44:45 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-06 15:44:46 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-06 15:47:13 : update res_order set `payment_id` = '317', `flag_checkout` = '1' WHERE table_id=27 AND payment_id = 0 AND flag_checkout = 0
+2023-05-06 15:47:13 : update res_table set table_status = NULL WHERE id=27
+2023-05-07 07:23:39 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-07 07:23:41 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-07 07:23:43 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-07 07:23:43 : update res_order set `flag_confirm` = '1' WHERE  table_id = 27 AND payment_id=0
+2023-05-07 07:23:45 : update res_order set `flag_printer` = '1' WHERE id=1254
+2023-05-07 07:23:45 : update res_order set `flag_printer` = '1' WHERE id=1255
+2023-05-07 07:23:46 : update res_order set `flag_printer` = '1' WHERE id=1256
+2023-05-07 07:28:01 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 07:28:01 : update res_order set `flag_confirm` = '1' WHERE  table_id = 28 AND payment_id=0
+2023-05-07 07:28:03 : update res_order set `flag_printer` = '1' WHERE id=1257
+2023-05-07 07:28:23 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 07:28:24 : update res_order set `flag_confirm` = '1' WHERE  table_id = 28 AND payment_id=0
+2023-05-07 07:28:26 : update res_order set `flag_printer` = '1' WHERE id=1258
+2023-05-07 07:38:57 : update res_order set `payment_id` = '318', `flag_checkout` = '1' WHERE table_id=28 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 07:38:57 : update res_table set table_status = NULL WHERE id=28
+2023-05-07 07:42:33 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 07:42:35 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 07:42:55 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 07:42:57 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 07:43:10 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 07:43:18 : update res_order set `flag_confirm` = '1' WHERE  table_id = 28 AND payment_id=0
+2023-05-07 07:43:20 : update res_order set `flag_printer` = '1' WHERE id=1261
+2023-05-07 07:43:20 : update res_order set `flag_printer` = '1' WHERE id=1262
+2023-05-07 07:43:20 : update res_order set `flag_printer` = '1' WHERE id=1263
+2023-05-07 07:51:55 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 07:51:56 : update res_order set `flag_confirm` = '1' WHERE  table_id = 4 AND payment_id=0
+2023-05-07 07:51:57 : update res_order set `flag_printer` = '1' WHERE id=1264
+2023-05-07 07:55:42 : update res_order set `payment_id` = '319', `flag_checkout` = '1' WHERE table_id=28 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 07:55:42 : update res_table set table_status = NULL WHERE id=28
+2023-05-07 08:10:11 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 08:10:27 : update res_order set `payment_id` = '320', `flag_checkout` = '1' WHERE table_id=4 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 08:10:27 : update res_table set table_status = NULL WHERE id=4
+2023-05-07 08:11:23 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 08:11:25 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 08:11:27 : update res_order set `flag_confirm` = '1' WHERE  table_id = 28 AND payment_id=0
+2023-05-07 08:11:29 : update res_order set `flag_printer` = '1' WHERE id=1266
+2023-05-07 08:11:29 : update res_order set `flag_printer` = '1' WHERE id=1267
+2023-05-07 08:16:33 : update res_order set `payment_id` = '321', `flag_checkout` = '1' WHERE table_id=28 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 08:16:33 : update res_table set table_status = NULL WHERE id=28
+2023-05-07 08:17:22 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 08:17:23 : update res_order set `flag_confirm` = '1' WHERE  table_id = 5 AND payment_id=0
+2023-05-07 08:17:26 : update res_order set `flag_printer` = '1' WHERE id=1268
+2023-05-07 08:18:11 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 08:18:15 : update res_order set `table_id` = '28', `menu_id` = '1', `option_id` = '10', `price` = '60', comment = NULL, `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 08:18:15' WHERE id=1269
+2023-05-07 08:18:15 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 08:18:24 : update res_order set `flag_confirm` = '1' WHERE  table_id = 28 AND payment_id=0
+2023-05-07 08:18:24 : update res_order set `flag_printer` = '1' WHERE id=1269
+2023-05-07 08:22:38 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-07 08:22:41 : update res_order set `flag_confirm` = '1' WHERE  table_id = 29 AND payment_id=0
+2023-05-07 08:22:43 : update res_order set `flag_printer` = '1' WHERE id=1270
+2023-05-07 08:24:05 : update res_order set `payment_id` = '322', `flag_checkout` = '1' WHERE table_id=28 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 08:24:05 : update res_table set table_status = NULL WHERE id=28
+2023-05-07 08:26:41 : update res_table set `table_status` = '1' WHERE id=7
+2023-05-07 08:26:45 : update res_table set `table_status` = '1' WHERE id=7
+2023-05-07 08:26:45 : update res_order set `flag_confirm` = '1' WHERE  table_id = 7 AND payment_id=0
+2023-05-07 08:26:46 : update res_order set `flag_printer` = '1' WHERE id=1271
+2023-05-07 08:26:46 : update res_order set `flag_printer` = '1' WHERE id=1272
+2023-05-07 08:27:22 : update res_order set `payment_id` = '323', `flag_checkout` = '1' WHERE table_id=29 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 08:27:22 : update res_table set table_status = NULL WHERE id=29
+2023-05-07 08:29:28 : update res_order set `payment_id` = '324', `flag_checkout` = '1' WHERE table_id=5 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 08:29:28 : update res_table set table_status = NULL WHERE id=5
+2023-05-07 08:29:53 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 08:30:08 : update res_order set `flag_confirm` = '1' WHERE  table_id = 5 AND payment_id=0
+2023-05-07 08:30:09 : update res_order set `flag_printer` = '1' WHERE id=1273
+2023-05-07 08:30:27 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 08:30:40 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 08:30:40 : update res_order set `flag_confirm` = '1' WHERE  table_id = 5 AND payment_id=0
+2023-05-07 08:30:41 : update res_order set `flag_printer` = '1' WHERE id=1274
+2023-05-07 08:30:41 : update res_order set `flag_printer` = '1' WHERE id=1275
+2023-05-07 08:31:08 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 08:31:18 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 08:31:28 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 08:32:01 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 08:32:19 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 08:32:20 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 08:32:21 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 08:32:23 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 08:32:24 : update res_order set `flag_confirm` = '1' WHERE  table_id = 3 AND payment_id=0
+2023-05-07 08:32:26 : update res_order set `flag_printer` = '1' WHERE id=1276
+2023-05-07 08:32:26 : update res_order set `flag_printer` = '1' WHERE id=1277
+2023-05-07 08:32:26 : update res_order set `flag_printer` = '1' WHERE id=1278
+2023-05-07 08:32:26 : update res_order set `flag_printer` = '1' WHERE id=1280
+2023-05-07 08:32:26 : update res_order set `flag_printer` = '1' WHERE id=1281
+2023-05-07 08:32:26 : update res_order set `flag_printer` = '1' WHERE id=1282
+2023-05-07 08:32:26 : update res_order set `flag_printer` = '1' WHERE id=1283
+2023-05-07 08:32:27 : update res_order set `flag_printer` = '1' WHERE id=1279
+2023-05-07 08:33:23 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 08:33:26 : update res_order set `flag_confirm` = '1' WHERE  table_id = 3 AND payment_id=0
+2023-05-07 08:33:28 : update res_order set `flag_printer` = '1' WHERE id=1284
+2023-05-07 08:34:33 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 08:34:42 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 08:34:42 : update res_order set `flag_confirm` = '1' WHERE  table_id = 28 AND payment_id=0
+2023-05-07 08:34:44 : update res_order set `flag_printer` = '1' WHERE id=1285
+2023-05-07 08:34:44 : update res_order set `flag_printer` = '1' WHERE id=1286
+2023-05-07 08:35:13 : update res_table set table_status = NULL WHERE id=3
+2023-05-07 08:35:13 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 08:37:32 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 08:37:34 : update res_order set `flag_confirm` = '1' WHERE  table_id = 5 AND payment_id=0
+2023-05-07 08:37:34 : update res_order set `flag_printer` = '1' WHERE id=1287
+2023-05-07 08:44:39 : update res_order set `payment_id` = '325', `flag_checkout` = '1' WHERE table_id=7 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 08:44:39 : update res_table set table_status = NULL WHERE id=7
+2023-05-07 08:45:29 : update res_order set `payment_id` = '326', `flag_checkout` = '1' WHERE table_id=5 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 08:45:29 : update res_table set table_status = NULL WHERE id=5
+2023-05-07 08:45:38 : update res_table set `table_status` = '1' WHERE id=2
+2023-05-07 08:45:42 : update res_table set `table_status` = '1' WHERE id=2
+2023-05-07 08:45:43 : update res_order set `flag_confirm` = '1' WHERE  table_id = 2 AND payment_id=0
+2023-05-07 08:45:44 : update res_order set `flag_printer` = '1' WHERE id=1288
+2023-05-07 08:45:44 : update res_order set `flag_printer` = '1' WHERE id=1289
+2023-05-07 08:46:23 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-07 08:46:25 : update res_order set `flag_confirm` = '1' WHERE  table_id = 29 AND payment_id=0
+2023-05-07 08:46:27 : update res_order set `flag_printer` = '1' WHERE id=1290
+2023-05-07 08:46:39 : update res_table set `table_status` = '1' WHERE id=9
+2023-05-07 08:46:45 : update res_table set `table_status` = '1' WHERE id=9
+2023-05-07 08:46:47 : update res_order set `flag_confirm` = '1' WHERE  table_id = 9 AND payment_id=0
+2023-05-07 08:46:48 : update res_order set `flag_printer` = '1' WHERE id=1291
+2023-05-07 08:46:48 : update res_order set `flag_printer` = '1' WHERE id=1292
+2023-05-07 08:48:32 : update res_table set `table_status` = '1' WHERE id=21
+2023-05-07 08:48:33 : update res_table set `table_status` = '1' WHERE id=21
+2023-05-07 08:48:43 : update res_table set `table_status` = '1' WHERE id=21
+2023-05-07 08:48:47 : update res_table set `table_status` = '1' WHERE id=21
+2023-05-07 08:48:48 : update res_order set `flag_confirm` = '1' WHERE  table_id = 21 AND payment_id=0
+2023-05-07 08:48:50 : update res_order set `flag_printer` = '1' WHERE id=1293
+2023-05-07 08:48:50 : update res_order set `flag_printer` = '1' WHERE id=1294
+2023-05-07 08:48:51 : update res_order set `flag_printer` = '1' WHERE id=1295
+2023-05-07 08:48:51 : update res_order set `flag_printer` = '1' WHERE id=1296
+2023-05-07 08:49:28 : update res_order set `payment_id` = '327', `flag_checkout` = '1' WHERE table_id=28 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 08:49:28 : update res_table set table_status = NULL WHERE id=28
+2023-05-07 08:49:37 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 08:49:37 : update res_order set `flag_confirm` = '1' WHERE  table_id = 4 AND payment_id=0
+2023-05-07 08:49:38 : update res_order set `flag_printer` = '1' WHERE id=1297
+2023-05-07 08:53:19 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-07 08:53:35 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-07 08:53:41 : update res_order set `table_id` = '10', `menu_id` = '15', `option_id` = '44', `price` = '50', `comment` = 'ใส่หมูสับ', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 08:53:41' WHERE id=1299
+2023-05-07 08:53:41 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-07 08:53:47 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-07 08:53:53 : update res_order set `flag_confirm` = '1' WHERE  table_id = 10 AND payment_id=0
+2023-05-07 08:53:55 : update res_order set `flag_printer` = '1' WHERE id=1298
+2023-05-07 08:53:55 : update res_order set `flag_printer` = '1' WHERE id=1300
+2023-05-07 08:53:56 : update res_order set `flag_printer` = '1' WHERE id=1299
+2023-05-07 08:57:40 : update res_order set `payment_id` = '328', `flag_checkout` = '1' WHERE table_id=4 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 08:57:40 : update res_table set table_status = NULL WHERE id=4
+2023-05-07 08:58:58 : update res_order set `payment_id` = '329', `flag_checkout` = '1' WHERE table_id=29 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 08:58:58 : update res_table set table_status = NULL WHERE id=29
+2023-05-07 09:01:32 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 09:01:33 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 09:01:40 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 09:01:41 : update res_order set `flag_confirm` = '1' WHERE  table_id = 3 AND payment_id=0
+2023-05-07 09:01:43 : update res_order set `flag_printer` = '1' WHERE id=1301
+2023-05-07 09:01:43 : update res_order set `flag_printer` = '1' WHERE id=1302
+2023-05-07 09:01:43 : update res_order set `flag_printer` = '1' WHERE id=1303
+2023-05-07 09:04:11 : update res_order set `payment_id` = '330', `flag_checkout` = '1' WHERE table_id=21 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:04:11 : update res_table set table_status = NULL WHERE id=21
+2023-05-07 09:04:39 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:04:40 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:04:41 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:05:01 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:05:05 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:05:12 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:05:14 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:05:15 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:05:16 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:05:17 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:05:19 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:05:22 : update res_order set `flag_confirm` = '1' WHERE  table_id = 4 AND payment_id=0
+2023-05-07 09:05:24 : update res_order set `flag_printer` = '1' WHERE id=1304
+2023-05-07 09:05:24 : update res_order set `flag_printer` = '1' WHERE id=1305
+2023-05-07 09:05:24 : update res_order set `flag_printer` = '1' WHERE id=1306
+2023-05-07 09:05:24 : update res_order set `flag_printer` = '1' WHERE id=1307
+2023-05-07 09:05:24 : update res_order set `flag_printer` = '1' WHERE id=1309
+2023-05-07 09:05:24 : update res_order set `flag_printer` = '1' WHERE id=1310
+2023-05-07 09:05:24 : update res_order set `flag_printer` = '1' WHERE id=1311
+2023-05-07 09:05:25 : update res_order set `flag_printer` = '1' WHERE id=1312
+2023-05-07 09:05:25 : update res_order set `flag_printer` = '1' WHERE id=1313
+2023-05-07 09:05:25 : update res_order set `flag_printer` = '1' WHERE id=1314
+2023-05-07 09:07:14 : update res_order set `table_id` = '4', `menu_id` = '1', `option_id` = '9', `price` = '60', comment = NULL, `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 09:07:14' WHERE id=1304
+2023-05-07 09:07:14 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:07:19 : update res_order set `flag_confirm` = '1' WHERE  table_id = 4 AND payment_id=0
+2023-05-07 09:07:20 : update res_order set `flag_printer` = '1' WHERE id=1304
+2023-05-07 09:07:24 : update res_order set `payment_id` = '331', `flag_checkout` = '1' WHERE table_id=9 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:07:24 : update res_table set table_status = NULL WHERE id=9
+2023-05-07 09:08:07 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-07 09:08:09 : update res_order set `flag_confirm` = '1' WHERE  table_id = 10 AND payment_id=0
+2023-05-07 09:08:12 : update res_order set `flag_printer` = '1' WHERE id=1315
+2023-05-07 09:15:12 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 09:15:13 : update res_table set `table_status` = '1' WHERE id=28
+2023-05-07 09:16:47 : update res_order set `flag_confirm` = '1' WHERE  table_id = 28 AND payment_id=0
+2023-05-07 09:16:48 : update res_order set `flag_printer` = '1' WHERE id=1316
+2023-05-07 09:16:48 : update res_order set `flag_printer` = '1' WHERE id=1317
+2023-05-07 09:16:49 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-07 09:16:50 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-07 09:16:51 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-07 09:16:52 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-07 09:16:53 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-07 09:16:54 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-07 09:17:37 : update res_order set `flag_confirm` = '1' WHERE  table_id = 29 AND payment_id=0
+2023-05-07 09:17:38 : update res_order set `flag_printer` = '1' WHERE id=1318
+2023-05-07 09:17:38 : update res_order set `flag_printer` = '1' WHERE id=1319
+2023-05-07 09:17:39 : update res_order set `flag_printer` = '1' WHERE id=1320
+2023-05-07 09:17:39 : update res_order set `flag_printer` = '1' WHERE id=1321
+2023-05-07 09:17:39 : update res_order set `flag_printer` = '1' WHERE id=1322
+2023-05-07 09:17:39 : update res_order set `flag_printer` = '1' WHERE id=1323
+2023-05-07 09:18:21 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-07 09:18:25 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-07 09:18:26 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-07 09:18:32 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-07 09:18:33 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-07 09:18:34 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-07 09:18:50 : update res_order set `flag_confirm` = '1' WHERE  table_id = 16 AND payment_id=0
+2023-05-07 09:18:51 : update res_order set `flag_printer` = '1' WHERE id=1324
+2023-05-07 09:18:52 : update res_order set `flag_printer` = '1' WHERE id=1325
+2023-05-07 09:18:52 : update res_order set `flag_printer` = '1' WHERE id=1326
+2023-05-07 09:18:52 : update res_order set `flag_printer` = '1' WHERE id=1327
+2023-05-07 09:18:52 : update res_order set `flag_printer` = '1' WHERE id=1328
+2023-05-07 09:18:52 : update res_order set `flag_printer` = '1' WHERE id=1329
+2023-05-07 09:19:38 : update res_order set `payment_id` = '332', `flag_checkout` = '1' WHERE table_id=3 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:19:38 : update res_table set table_status = NULL WHERE id=3
+2023-05-07 09:19:49 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-07 09:20:13 : update res_order set `payment_id` = '333', `flag_checkout` = '1' WHERE table_id=10 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:20:13 : update res_table set table_status = NULL WHERE id=10
+2023-05-07 09:20:33 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 09:20:39 : update res_order set `table_id` = '5', `menu_id` = '12', `option_id` = '39', `price` = '60', `comment` = 'หมูกรอบไม่ใส่พริก', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 09:20:39' WHERE id=1331
+2023-05-07 09:20:39 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 09:20:43 : update res_order set `flag_confirm` = '1' WHERE  table_id = 5 AND payment_id=0
+2023-05-07 09:20:45 : update res_order set `flag_printer` = '1' WHERE id=1331
+2023-05-07 09:23:14 : update res_order set `payment_id` = '334', `flag_checkout` = '1' WHERE table_id=27 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:23:14 : update res_table set table_status = NULL WHERE id=27
+2023-05-07 09:25:01 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-07 09:25:02 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-07 09:25:03 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-07 09:25:04 : update res_order set `flag_confirm` = '1' WHERE  table_id = 27 AND payment_id=0
+2023-05-07 09:25:06 : update res_order set `flag_printer` = '1' WHERE id=1332
+2023-05-07 09:25:06 : update res_order set `flag_printer` = '1' WHERE id=1333
+2023-05-07 09:25:06 : update res_order set `flag_printer` = '1' WHERE id=1334
+2023-05-07 09:25:21 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-07 09:25:24 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-07 09:25:41 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-07 09:25:43 : update res_order set `flag_confirm` = '1' WHERE  table_id = 6 AND payment_id=0
+2023-05-07 09:25:45 : update res_order set `flag_printer` = '1' WHERE id=1337
+2023-05-07 09:25:45 : update res_order set `flag_printer` = '1' WHERE id=1335
+2023-05-07 09:25:45 : update res_order set `flag_printer` = '1' WHERE id=1336
+2023-05-07 09:29:00 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-07 09:29:01 : update res_table set `table_status` = '1' WHERE id=29
+2023-05-07 09:29:13 : update res_order set `payment_id` = '335', `flag_checkout` = '1' WHERE table_id=28 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:29:13 : update res_table set table_status = NULL WHERE id=28
+2023-05-07 09:30:21 : update res_order set `payment_id` = '336', `flag_checkout` = '1' WHERE table_id=4 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:30:21 : update res_table set table_status = NULL WHERE id=4
+2023-05-07 09:32:11 : update res_order set `payment_id` = '337', `flag_checkout` = '1' WHERE table_id=29 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:32:11 : update res_table set table_status = NULL WHERE id=29
+2023-05-07 09:33:47 : update res_order set `payment_id` = '338', `flag_checkout` = '1' WHERE table_id=2 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:33:47 : update res_table set table_status = NULL WHERE id=2
+2023-05-07 09:34:58 : update res_order set `payment_id` = '339', `flag_checkout` = '1' WHERE table_id=16 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:34:58 : update res_table set table_status = NULL WHERE id=16
+2023-05-07 09:35:28 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 09:36:03 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 09:36:04 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 09:36:05 : update res_table set `table_status` = '1' WHERE id=3
+2023-05-07 09:36:06 : update res_order set `flag_confirm` = '1' WHERE  table_id = 3 AND payment_id=0
+2023-05-07 09:36:09 : update res_order set `flag_printer` = '1' WHERE id=1340
+2023-05-07 09:36:09 : update res_order set `flag_printer` = '1' WHERE id=1341
+2023-05-07 09:36:09 : update res_order set `flag_printer` = '1' WHERE id=1342
+2023-05-07 09:36:09 : update res_order set `flag_printer` = '1' WHERE id=1343
+2023-05-07 09:36:16 : update res_order set `table_id` = '5', `menu_id` = '12', `option_id` = '40', `price` = '70', `comment` = 'หมูกรอบไม่ใส่พริก', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 09:36:16' WHERE id=1331
+2023-05-07 09:36:16 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 09:38:28 : update res_order set `payment_id` = '340', `flag_checkout` = '1' WHERE table_id=27 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:38:28 : update res_table set table_status = NULL WHERE id=27
+2023-05-07 09:39:22 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-07 09:39:30 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-07 09:39:37 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-07 09:39:58 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-07 09:40:00 : update res_order set `flag_confirm` = '1' WHERE  table_id = 8 AND payment_id=0
+2023-05-07 09:40:01 : update res_order set `flag_printer` = '1' WHERE id=1344
+2023-05-07 09:40:01 : update res_order set `flag_printer` = '1' WHERE id=1345
+2023-05-07 09:40:02 : update res_order set `flag_printer` = '1' WHERE id=1346
+2023-05-07 09:40:02 : update res_order set `flag_printer` = '1' WHERE id=1347
+2023-05-07 09:42:28 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-07 09:42:30 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-07 09:42:33 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-07 09:42:34 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-07 09:42:35 : update res_order set `flag_confirm` = '1' WHERE  table_id = 1 AND payment_id=0
+2023-05-07 09:42:37 : update res_order set `flag_printer` = '1' WHERE id=1348
+2023-05-07 09:42:37 : update res_order set `flag_printer` = '1' WHERE id=1349
+2023-05-07 09:42:37 : update res_order set `flag_printer` = '1' WHERE id=1350
+2023-05-07 09:42:37 : update res_order set `flag_printer` = '1' WHERE id=1351
+2023-05-07 09:42:43 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-07 09:43:08 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-07 09:43:16 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-07 09:43:24 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-07 09:43:48 : update res_table set `table_status` = '1' WHERE id=16
+2023-05-07 09:43:49 : update res_order set `flag_confirm` = '1' WHERE  table_id = 16 AND payment_id=0
+2023-05-07 09:43:50 : update res_order set `flag_printer` = '1' WHERE id=1352
+2023-05-07 09:43:50 : update res_order set `flag_printer` = '1' WHERE id=1354
+2023-05-07 09:43:50 : update res_order set `flag_printer` = '1' WHERE id=1355
+2023-05-07 09:43:51 : update res_order set `flag_printer` = '1' WHERE id=1353
+2023-05-07 09:47:21 : update res_order set `table_id` = '8', `menu_id` = '12', `option_id` = '41', `price` = '60', `comment` = 'หมูกรอบไม่เผ็ด', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 09:47:21' WHERE id=1344
+2023-05-07 09:47:21 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-07 09:47:52 : update res_table set `table_status` = '1' WHERE id=27
+2023-05-07 09:47:53 : update res_order set `flag_confirm` = '1' WHERE  table_id = 27 AND payment_id=0
+2023-05-07 09:47:54 : update res_order set `flag_printer` = '1' WHERE id=1357
+2023-05-07 09:49:50 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-07 09:50:04 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-07 09:50:17 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-07 09:50:32 : update res_order set `flag_confirm` = '1' WHERE  table_id = 10 AND payment_id=0
+2023-05-07 09:50:33 : update res_order set `flag_printer` = '1' WHERE id=1358
+2023-05-07 09:50:33 : update res_order set `flag_printer` = '1' WHERE id=1359
+2023-05-07 09:50:34 : update res_order set `flag_printer` = '1' WHERE id=1360
+2023-05-07 09:52:12 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-07 09:52:14 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-07 09:52:25 : update res_order set `payment_id` = '341', `flag_checkout` = '1' WHERE table_id=6 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:52:25 : update res_table set table_status = NULL WHERE id=6
+2023-05-07 09:54:04 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:54:07 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:54:10 : update res_table set `table_status` = '1' WHERE id=4
+2023-05-07 09:54:20 : update res_order set `flag_confirm` = '1' WHERE  table_id = 4 AND payment_id=0
+2023-05-07 09:54:22 : update res_order set `flag_printer` = '1' WHERE id=1364
+2023-05-07 09:54:22 : update res_order set `flag_printer` = '1' WHERE id=1365
+2023-05-07 09:54:23 : update res_order set `flag_printer` = '1' WHERE id=1363
+2023-05-07 09:54:54 : update res_order set `payment_id` = '342', `flag_checkout` = '1' WHERE table_id=27 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 09:54:54 : update res_table set table_status = NULL WHERE id=27
+2023-05-07 10:01:34 : update res_order set `payment_id` = '343', `flag_checkout` = '1' WHERE table_id=5 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 10:01:34 : update res_table set table_status = NULL WHERE id=5
+2023-05-07 10:02:17 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-07 10:02:48 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-07 10:02:50 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-07 10:03:11 : update res_order set `payment_id` = '344', `flag_checkout` = '1' WHERE table_id=3 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 10:03:11 : update res_table set table_status = NULL WHERE id=3
+2023-05-07 10:03:22 : update res_order set `flag_confirm` = '1' WHERE  table_id = 8 AND payment_id=0
+2023-05-07 10:03:23 : update res_order set `flag_printer` = '1' WHERE id=1367
+2023-05-07 10:03:23 : update res_order set `flag_printer` = '1' WHERE id=1368
+2023-05-07 10:03:23 : update res_order set `flag_printer` = '1' WHERE id=1344
+2023-05-07 10:04:11 : update res_order set `payment_id` = '345', `flag_checkout` = '1' WHERE table_id=16 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 10:04:11 : update res_table set table_status = NULL WHERE id=16
+2023-05-07 10:07:08 : update res_order set `payment_id` = '346', `flag_checkout` = '1' WHERE table_id=1 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 10:07:08 : update res_table set table_status = NULL WHERE id=1
+2023-05-07 10:07:41 : update res_table set `table_status` = '1' WHERE id=10
+2023-05-07 10:10:13 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-07 10:10:16 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-07 10:10:19 : update res_table set `table_status` = '1' WHERE id=8
+2023-05-07 10:10:31 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-07 10:10:39 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-07 10:10:42 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-07 10:10:43 : update res_table set `table_status` = '1' WHERE id=6
+2023-05-07 10:10:45 : update res_order set `payment_id` = '347', `flag_checkout` = '1' WHERE table_id=8 AND payment_id = 0 AND flag_checkout = 0
+2023-05-07 10:10:45 : update res_table set table_status = NULL WHERE id=8
+2023-05-07 10:10:48 : update res_order set `flag_confirm` = '1' WHERE  table_id = 6 AND payment_id=0
+2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1373
+2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1374
+2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1375
+2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1376
 2023-05-07 10:06:31 : update res_table set `table_status` = '1' WHERE id=1
 2023-05-07 10:07:26 : update res_table set `table_status` = '1' WHERE id=1
 2023-05-07 10:09:38 : update res_table set `table_status` = '1' WHERE id=1
