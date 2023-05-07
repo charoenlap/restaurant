@@ -35,5 +35,11 @@
             $data = $this->model('master')->getSumPayment($date)->rows;
 			$this->json($data); 
         }
+        public function getOrderListCategory(){
+            $data = array();
+            $date = (get('date')?get('date'):date('Y-m-d'));
+            $data = $this->model('master')->getOrderListCategory($date)->rows;
+			$this->json($data); 
+        }
     }
 ?>

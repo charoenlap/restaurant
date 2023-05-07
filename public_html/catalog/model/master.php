@@ -217,5 +217,25 @@
             $result = $this->query($sql);
             return $result->rows;
         }
+        public function getOrderListCategory($date=''){
+            $result = array();
+            $sql = "SELECT
+                res_category.category_name,
+                SUM(res_order.price) as sum_price
+            FROM
+                res_category
+                INNER JOIN
+                res_menu
+                ON 
+                    res_category.id = res_menu.category_id
+                INNER JOIN
+                res_order
+                ON 
+                    res_order.menu_id = res_menu.id
+            WHERE res_order.date_create like '".$date." %'
+                GROUP BY category_id";
+            $result = $this->query($sql);
+            return $result;
+        }
 	}
 ?>
