@@ -470,7 +470,7 @@
             option_id: option_id
         },
         success: function(response) {
-            
+            console.log(response);
             var newRow = '<tr data-toggle="modal" data-target="#editModal" menu-id="'+id+'" order-id="'+response+'" flag-confirm="0">' +
                         '<td>'+print+'</td>'+
                         '<td><div class="foodName">' + name + '</div>  <div class="comment">' + comment + '</div></td>' +

@@ -89,7 +89,13 @@
 					);
 					$result = $this->model('master')->submitOrder($insert);
 					$this->model('master')->updateTable($data['table_id'],1);
-					echo $result;
+
+					$result_menu = $this->model('master')->getMenuID($data['menu_id']);
+					if($result_menu['category_id']==5){
+						$result_table = $this->model('master')->getTableID($data['table_id'])->row;
+						sendNoti('มีออร์เดอร์ โต๊ะ: '.$result_table['table_name'].' เมนู: '.$result_menu['name']);
+						echo $result;
+					}
 				// }
 			}
 		}

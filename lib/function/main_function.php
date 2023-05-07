@@ -1295,5 +1295,33 @@
 	  }
 
 	}
+	function sendNoti($msg=''){
+		$message = $msg;
+		$token = "Bs88udY0fqIRLbai3cWE0B6RULxrWBhjSW9GEq6IOIp";
 
+		$line_notify_url = "https://notify-api.line.me/api/notify";
+		$line_notify_token = $token;
+
+		$headers = array(
+			'Content-Type: application/x-www-form-urlencoded',
+			'Authorization: Bearer ' . $line_notify_token
+		);
+
+		$data = array(
+			'message' => $message
+		);
+
+		$options = array(
+			'http' => array(
+				'header' => implode("\r\n", $headers),
+				'method' => 'POST',
+				'content' => http_build_query($data)
+			)
+		);
+
+		$context = stream_context_create($options);
+		$result = file_get_contents($line_notify_url, false, $context);
+
+		echo $result;
+	}
 ?>
