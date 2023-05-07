@@ -3691,4 +3691,15 @@
 2023-05-07 10:10:50 : update res_order set `flag_printer` = '1' WHERE id=1376
 2023-05-07 10:06:31 : update res_table set `table_status` = '1' WHERE id=1
 2023-05-07 10:07:26 : update res_table set `table_status` = '1' WHERE id=1
-2023-05-07 10:09:38 : update res_table set `table_status` = '1' WHERE id=1
+2023-05-07 10:09:38 : update res_table set `table_status` = '1' WHERE id=12023-05-07 10:14:46 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 10:17:25 : update res_order set `table_id` = '5', `menu_id` = '1', `option_id` = '63', `price` = '70', comment = NULL, `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 10:17:25' WHERE id=917
+2023-05-07 10:17:25 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 10:17:30 : update res_order set `table_id` = '5', `menu_id` = '1', `option_id` = '63', `price` = '70', comment = NULL, `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 10:17:30' WHERE id=917
+2023-05-07 10:17:30 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 10:17:38 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 10:17:41 : update res_order set `table_id` = '5', `menu_id` = '1', `option_id` = '9', `price` = '50', comment = NULL, `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 10:17:41' WHERE id=918
+2023-05-07 10:17:41 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 10:18:58 : update res_order set `table_id` = '5', `menu_id` = '1', `option_id` = '63', `price` = '70', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 10:18:58' WHERE id=918
+2023-05-07 10:18:58 : update res_table set `table_status` = '1' WHERE id=5
+2023-05-07 10:19:01 : update res_order set `table_id` = '5', `menu_id` = '1', `option_id` = '63', `price` = '70', `comment` = 'null', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 10:19:01' WHERE id=917
+2023-05-07 10:19:01 : update res_table set `table_status` = '1' WHERE id=5

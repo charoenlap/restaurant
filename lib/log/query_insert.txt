@@ -1598,3 +1598,5 @@
 2023-05-07 10:07:26 : insert into res_order set `table_id` = '1', `menu_id` = '1', `option_id` = '62', `price` = '60', `comment` = '', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 10:07:26'
 2023-05-07 10:09:38 : insert into res_order set `table_id` = '1', `menu_id` = '7', `option_id` = '28', `price` = '70', `comment` = '', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 10:09:38'
 
+2023-05-07 10:14:46 : insert into res_order set `table_id` = '5', `menu_id` = '1', `option_id` = '63', `price` = '70', `comment` = '', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 10:14:46'
+2023-05-07 10:17:38 : insert into res_order set `table_id` = '5', `menu_id` = '1', `option_id` = '63', `price` = '70', `comment` = '', `flag_confirm` = '0', `flag_printer` = '0', `flag_checkout` = '0', `date_create` = '2023-05-07 10:17:38'

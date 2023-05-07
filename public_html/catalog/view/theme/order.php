@@ -340,6 +340,8 @@
         var optionText = $(this).find('td .optionText').text();
         var comment = $(this).find('td .comment').text().trim();
         order_id = elementEdit.attr('order-id');// order-id
+        var menu_id = elementEdit.attr('menu-id');// order-id
+
         $('#showOrderID').text(order_id);
         var price = $(this).find('td .price').text().trim();
         $('#editModal #comment').val(comment);
@@ -378,7 +380,7 @@
                 })
                 // alert(price);
                 $('#editModal .modal-title').attr('menu-id',menuId);
-                $('#editModal .price').text(price);
+                $('#editModal .price').text(menu.price);
                 $('#editModal .options').html(optionsHtml);
                 $('#editModal .options input:eq(0)').prop('checked', true);
             },
@@ -397,7 +399,9 @@
         var option_price = $('#editModal input[name="option"]:checked').attr('data-price');
         var option      = $('#editModal input[name="option"]:checked').attr('data-name');
         var comment     = $('#editModal #comment').val();
-        
+        if(comment=='null'){
+            comment = '';
+        }
         elementEdit.find('td:eq(0)').empty();
         elementEdit.find('td:eq(0)').html('<a href="#" class="text-danger"><i class="fas fa-print"></i></a>');
 
@@ -409,7 +413,7 @@
 
         elementEdit.find('td:eq(3)').empty();
         var newPrice = (parseFloat(price) + parseFloat(option_price));
-        var html = '<div class="price">'+price+'</div><input type="hidden" name="menu_id[]" value="'+id+'">'+
+        var html = '<div class="price">'+newPrice+'</div><input type="hidden" name="menu_id[]" value="'+id+'">'+
         '<input type="hidden" name="table_id[]" value="<?php echo get('table_id'); ?>">'+
         '<input type="hidden" name="price[]" value="'+ newPrice +'">'+
         '<input type="hidden" name="comment[]" value="'+ comment +'">'+
