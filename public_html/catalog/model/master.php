@@ -219,7 +219,7 @@
         }
         public function getOrderListCategory($date=''){
             $result = array();
-            echo $sql = "SELECT
+            $sql = "SELECT
                 res_category.category_name,
                 SUM(res_order.price) as sum_price
             FROM

@@ -36,7 +36,13 @@
 			// $this->view('print',$data); 
 			if(method_post()){
 				$id = (int)post('order_id');
+				$table_id = (int)post('table_id');
 				$this->model('master')->deleteOrder($id);
+				$count_order = $this->model('master')->getOrderID($table_id)->num_rows;
+				echo $count_order;
+				if($count_order==0){
+					$this->model('master')->updateTable($table_id,0);
+				}
 			}
 	    }
 		public function getMenu(){

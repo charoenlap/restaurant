@@ -322,10 +322,11 @@
             url: 'index.php?route=order/deleteOrder',
             type: 'POST',
             data: { 
-                order_id: order_id
+                order_id: order_id,
+                table_id: '<?php echo get('table_id');?>'
             },
             success: function(response) {
-                // console.log(response);
+                console.log(response);
                 
                 elementEdit.remove();
             },
