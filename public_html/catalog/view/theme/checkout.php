@@ -223,7 +223,7 @@
             $.each(response, function(key, value) {
                 var newRow = '<tr data-toggle="modal" data-target="#editModal" menu-id="'+value.menu_id+'" flag-confirm="'+value.flag_confirm+'">' +
                         '<td>' + value.name + '  <div>' + value.comment + '</div></td>' +
-                        // '<td>' + value.option_name + '</td>' +
+                        '<td>' + value.option_name + '</td>' +
                         '<td>' + parseInt(value.price) +
                         '<input type="hidden" name="menu_id[]" value="'+value.id+'">' +
                         '<input type="hidden" name="table_id[]" value="<?php echo get('table_id'); ?>">' +
