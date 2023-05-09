@@ -94,9 +94,10 @@
 					if($result_menu['category_id']==5){
 						$result_table = $this->model('master')->getTableID($data['table_id'])->row;
 						sendNoti('มีออร์เดอร์ โต๊ะ: '.$result_table['table_name'].' เมนู: '.$result_menu['name']);
-						echo $result;
+						
 					}
-				// }
+				echo $result;
+					// }
 			}
 		}
 		public function submitSingleOrderEdit(){

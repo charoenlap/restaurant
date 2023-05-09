@@ -56,7 +56,7 @@
             method: 'GET',
             data: { date: date },
             success: function(response) {
-                console.log(response);
+                // console.log(response);
                 $('#list-order-detail').html('');
                 $.each(response, function(index, value) {
                     $('#list-order-detail').append('<li>'+value.category_name+': '+value.sum_price+'</li>');

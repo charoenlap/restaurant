@@ -706,7 +706,7 @@
 		}
 		return $result;
 	}
-	function upload($var=array(),$path,$img_profile_name=""){
+	function upload($var=array(),$path='',$img_profile_name=""){
 		if(empty($img_profile_name)){
 			$img_profile_name = $var["name"];
 		}
@@ -718,7 +718,7 @@
 		return $result;
 	}
 
-	function uploadMunti($var=array(),$path,$img_profile_name=""){
+	function uploadMunti($var=array(),$path='',$img_profile_name=""){
 		if(empty($img_profile_name)){
 			$img_profile_name = $var;
 		}
@@ -729,7 +729,7 @@
 		}
 		return $result;
 	}
-	function uploadProfile($var,$path,$img_profile_name=""){
+	function uploadProfile($var,$path='',$img_profile_name=""){
 		if(empty($img_profile_name)){
 			$img_profile_name = $var["name"];
 		}
