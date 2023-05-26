@@ -24,7 +24,16 @@
             if(!empty($month)){
                 $where .= " AND MONTH(date_create) = '".$month."'";
             }
-            $result = $this->query("SELECT DATE(date_create) AS order_date, SUM(amount) AS total_amount FROM res_payment ".$where." GROUP BY DATE(date_create) ORDER BY order_date DESC");
+            $result = $this->query("SELECT DATE(date_create) AS order_date, SUM(amount) AS total_amount, id FROM res_payment ".$where." GROUP BY DATE(date_create) ORDER BY order_date DESC");
+            return $result;
+        }
+        public function getSumPayment_v2($month=0){
+            $result = array();
+            $where = ' WHERE id<>0 ';
+            if(!empty($month)){
+                $where .= " AND MONTH(date_create) = '".$month."'";
+            }
+            $result = $this->query("SELECT DATE(date_create) AS order_date, SUM(amount) AS total_amount, id FROM res_payment ".$where." GROUP BY DATE(date_create) ORDER BY order_date DESC");
             return $result;
         }
         public function getTableEmpty(){
@@ -89,7 +98,7 @@
             $result = $this->insert('order',$data);
             return $result;
         }
-        public function submitOrderEdit($data=array(),$id){
+        public function submitOrderEdit($data=array(),$id = ''){
             $result = array();
             $result = $this->update('order',$data,'id='.$id);
             return $result;
@@ -217,11 +226,11 @@
             $result = $this->query($sql);
             return $result->rows;
         }
-        public function getOrderListCategory($date=''){
+        public function getOrderListCategory($date='', $cate_id = ''){
             $result = array();
             $sql = "SELECT
                 res_category.category_name,
-                SUM(res_order.price) as sum_price
+                SUM(res_order.price) as sum_price, res_category.id
             FROM
                 res_category
                 INNER JOIN
@@ -231,9 +240,12 @@
                 INNER JOIN
                 res_order
                 ON 
-                    res_order.menu_id = res_menu.id
-            WHERE res_order.date_create like '".$date." %' 
-                GROUP BY category_id";
+                    res_order.menu_id = res_menu.id ";
+            $sql .= " WHERE res_order.date_create like '".$date." %' ";
+            if ($cate_id) {
+                $sql .= " AND res_category.id = " . $cate_id;
+            }
+            $sql .= " GROUP BY category_id";
             $result = $this->query($sql);
             return $result;
         }

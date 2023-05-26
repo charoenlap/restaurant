@@ -18,9 +18,9 @@
 		require_once($_SERVER['DOCUMENT_ROOT'].'/restaurant/public_html/admin_back_office/catalog/setup.php'); 
 		require_once($_SERVER['DOCUMENT_ROOT'].'/restaurant/lib/system/loader/autoload.php');
 	}else{
-		require_once('/home/charoenlap/domains/charoenlap.com/public_html/restaurant/config/domains/restaurant/config.php'); 
-		require_once('/home/charoenlap/domains/charoenlap.com/public_html/restaurant/lib/function/main_function.php');
-		require_once('/home/charoenlap/domains/charoenlap.com/public_html/restaurant/public_html/admin_back_office/catalog/setup.php'); 
-		require_once('/home/charoenlap/domains/charoenlap.com/public_html/restaurant/lib/system/loader/autoload.php'); 
+		require_once('C:\xampp\htdocs\web/restaurant/config/domains/restaurant/config.php');
+		require_once('C:\xampp\htdocs\web/restaurant/lib/function/main_function.php');
+		require_once('C:\xampp\htdocs\web/restaurant/public_html/admin_back_office/catalog/setup.php');
+		require_once('C:\xampp\htdocs\web/restaurant/lib/system/loader/autoload.php');
 	}
 ?>

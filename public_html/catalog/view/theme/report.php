@@ -1,3 +1,6 @@
+<pre>
+<!--    --><?php //print_r($date_lists); ?>
+</pre>
 <div class="container mt-4">
     <div class="row">
         <div class="col-12">
@@ -6,6 +9,15 @@
                 foreach($months as $key=>$val){?>
                 <option value="<?php echo $key;?>" <?php echo ($key==$now_month?'selected':'')?>><?php echo $val;?></option>
                <?php }?>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+<!--            <pre>--><?php //print_r($category); ?><!--</pre>-->
+            <select name="" id="selecKanom" class="form-control">
+                <option value="0" <?php echo ($kanom=='0'?'selected':'0')?>>ไม่รวมขนม</option>
+                <option value="1" <?php echo ($kanom=='1'?'selected':'1')?>>รวมขนม</option>
             </select>
         </div>
     </div>
@@ -70,6 +82,10 @@
     });
     $(document).on('change','#selectMonth',function(e){
         window.location = 'index.php?route=report&month='+$(this).val();
+    });
+    $(document).on('change','#selecKanom',function(e){
+        var month = $('#selectMonth').find(":selected").val();
+        window.location = 'index.php?route=report&month='+ month + '&kanom='+$(this).val();
     });
     google.charts.load('current', {'packages':['bar']});
     google.charts.setOnLoadCallback(drawChart);

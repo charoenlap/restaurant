@@ -16,14 +16,14 @@
 		// Config DB SERVER
 		define('PREFIX', 'res_');
 		define('DB_HOST','localhost');
-		define('DB_USER','charoenlap_res');
-		define('DB_PASS','1Kq80dSn');
+		define('DB_USER','root');
+		define('DB_PASS','');
 		define('DB_DB','charoenlap_res');
-		$base = '/home/charoenlap/domains/charoenlap.com/public_html/restaurant/public_html/';
-		define('DOCUMENT_ROOT','/home/charoenlap/domains/charoenlap.com/public_html/restaurant/lib/');
-		define('DOCUMENT_ROOT_LINE','/home/charoenlap/domains/charoenlap.com/public_html/restaurant/line/');
+		$base = 'C:/xampp/htdocs/web/restaurant/public_html/';
+		define('DOCUMENT_ROOT','C:/xampp/htdocs/web/restaurant/lib/');
+		define('DOCUMENT_ROOT_LINE','C:/xampp/htdocs/web/restaurant/line/');
 		define('MURL','http://charoenlap.com/restaurant/');
-		define('PATH_JSON','/home/charoenlap/domains/charoenlap.com/public_html/restaurant/json/');
+		define('PATH_JSON','C:/xampp/htdocs/web/restaurant/json/');
 	}else{
 		if(TYPE_LOCAL=='win'){
 			define('PREFIX', 'res_');
