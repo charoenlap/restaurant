@@ -26,13 +26,24 @@
             <div id="chart_div"></div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12">
+            <?php
+            $sumTotal = 0;
+            foreach($date_lists as $val) {
+                $sumTotal += $val['total_amount'];
+            }
+            echo "ยอดรวมทั้งหมด: ".number_format($sumTotal);
+            ?>
+        </div>
+    </div>
     <div class="row mt-4">
         <div class="col-12">
             <ul id="orders-list">
                 <?php foreach($date_lists as $val){ ?>
                 <li>
                     <a href="#" class="order_date_detail" data-id="<?php echo $val['id'];?>" data-date="<?php echo $val['order_date'];?>" data-toggle="modal" data-target="#detailModal">
-                        <?php echo $val['order_date'].' - '.$val['total_amount'];?>
+                        <?php echo $val['order_date'].' - '.number_format($val['total_amount']);?>
                     </a>
                 </li>
                 <?php }?>

@@ -36,7 +36,7 @@
     </div>
     <div class="row">
         <div class="col-12">
-        <label for="num-pad-input">รับเข้า:</label>
+<!--        <label for="num-pad-input">รับเข้า:</label>-->
         <input id="num-pad-input" type="text" class="form-control" value="">
         </div>
     </div>
@@ -99,21 +99,22 @@
             </div>
             <div class="modal-body">
                 <ul class="nav nav-tabs" id="qrTabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="qrCodeTab" data-toggle="tab" href="#qrCode" role="tab" aria-controls="qrCode" aria-selected="true">กรุงเทพ</a>
-                    </li>
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link active" id="qrCodeTab" data-toggle="tab" href="#qrCode" role="tab" aria-controls="qrCode" aria-selected="true">กรุงเทพ</a>-->
+<!--                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link" id="qrImageTab" data-toggle="tab" href="#qrImage" role="tab" aria-controls="qrImage" aria-selected="false">กรุงไทย</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="qrTabContent">
-                    <div class="tab-pane fade show active" id="qrCode" role="tabpanel" aria-labelledby="qrCodeTab">
-                        <img src="images/qr.jpg" class="img-fluid">
-                        <label for=""></label>
-                    </div>
-                    <div class="tab-pane fade" id="qrImage" role="tabpanel" aria-labelledby="qrImageTab">
+<!--                    <div class="tab-pane fade show active" id="qrCode" role="tabpanel" aria-labelledby="qrCodeTab">-->
+<!--                        <img src="images/qr.jpg" class="img-fluid">-->
+<!--                        <label for=""></label>-->
+<!--                    </div>-->
+                    <div class="tab-pane fade  show active" id="qrImage" role="tabpanel" aria-labelledby="qrImageTab" style="text-align: center; font-size: 20px;">
                         <img src="images/qr2.jpg" class="img-fluid">
-                        <label for=""></label>
+                        <br>
+                        <label for="">นางสาว ศิริลักษณ์ แซ่จาง</label>
                     </div>
                 </div>
                 <div class="row">
@@ -253,42 +254,30 @@
     });
     $(document).ready(function() {
         // Create the number pad buttons
-        for (var i = 1; i <= 9; i++) {
+        // for (var i = 1; i <= 9; i++) {
+        //     var button = $('<button></button>', {
+        //     class: 'num-pad-button btn-calculate',
+        //     text: i,
+        //     data: {
+        //         value: i
+        //     }
+        //     });
+        //
+        //     $('.num-pad').append(button);
+        // }
+        $.each([100,200,300,500,1000], function(index, value) {
             var button = $('<button></button>', {
-            class: 'num-pad-button btn-calculate',
-            text: i,
-            data: {
-                value: i
-            }
+                class: 'num-pad-button btn-calculate',
+                text: value,
+                data: {
+                    value: value
+                }
             });
-            
             $('.num-pad').append(button);
-        }
-        var button = $('<button></button>', {
-            class: 'num-pad-button btn-calculate',
-            text: 0,
-            data: {
-                value: 0
-            }
-            });
-        $('.num-pad').append(button);
+        });
+
         
-        var button = $('<button></button>', {
-            class: 'num-pad-button btn-calculate',
-            text: 100,
-            data: {
-                value: 100
-            }
-            });
-        $('.num-pad').append(button);
-        var button = $('<button></button>', {
-            class: 'num-pad-button btn-calculate',
-            text: 500,
-            data: {
-                value: 500
-            }
-            });
-        $('.num-pad').append(button);
+
         // var deleteButton = $('<button></button>', {
         //     id: 'num-pad-delete',
         //     class: 'btn btn-danger btn-block num-pad-button',

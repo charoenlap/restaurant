@@ -75,7 +75,7 @@
             $categories = $this->query("SELECT * FROM res_category");
             foreach($categories->rows as $cate){
                 $result_menu = array();
-                $menus = $this->query("SELECT * FROM res_menu WHERE category_id = ".$cate['id']);
+                $menus = $this->query("SELECT * FROM res_menu WHERE category_id = ".$cate['id'] . " ORDER BY sort ASC");
                 foreach($menus->rows as $menu){
                     $result_menu[] = array(
                         'id' => $menu['id'],
