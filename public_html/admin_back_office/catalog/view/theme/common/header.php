@@ -27,6 +27,9 @@
       <li class="nav-item ">
         <a class="nav-link" href="<?php echo route('tags');?>">Tags</a>
       </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="<?php echo route('report');?>">Report</a>
+        </li>
     </ul>
   </div>
 </nav>

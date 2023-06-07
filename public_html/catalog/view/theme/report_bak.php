@@ -61,9 +61,28 @@
                 </button>
             </div>
             <div class="modal-body">
+                <h4>รวมทั้งหมด</h4>
                 <div class="row">
                     <div class="col-md-12">
                         <ul id="list-order-detail"></ul>
+                    </div>
+                </div>
+                <h4>ชานมหน้าร้าน</h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul id="list-order-detail-font-chanon"></ul>
+                    </div>
+                </div>
+                <h4>กลับบ้าน</h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul id="list-order-detail-go-home"></ul>
+                    </div>
+                </div>
+                <h4>กลับบ้าน</h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul id="list-order-detail-tik-send"></ul>
                     </div>
                 </div>
             </div>
@@ -83,6 +102,54 @@
                 $('#list-order-detail').html('');
                 $.each(response, function(index, value) {
                     $('#list-order-detail').append('<li>'+value.category_name+': '+value.sum_price+'</li>');
+                })
+            },
+            error: function(xhr, status, error) {
+                // Handle the error here
+                console.log(xhr,error);
+            }
+        });
+        $.ajax({
+            url: 'index.php?route=report/getOrderListCategory',
+            method: 'GET',
+            data: { date: date, table_arr_id: '31,32,33,35' },
+            success: function(response) {
+                // console.log(response);
+                $('#list-order-detail-font-chanon').html('');
+                $.each(response, function(index, value) {
+                    $('#list-order-detail-font-chanon').append('<li>'+value.category_name+': '+value.sum_price+'</li>');
+                })
+            },
+            error: function(xhr, status, error) {
+                // Handle the error here
+                console.log(xhr,error);
+            }
+        });
+        $.ajax({
+            url: 'index.php?route=report/getOrderListCategory',
+            method: 'GET',
+            data: { date: date, table_arr_id: '27,28,29,34' },
+            success: function(response) {
+                // console.log(response);
+                $('#list-order-detail-go-home').html('');
+                $.each(response, function(index, value) {
+                    $('#list-order-detail-go-home').append('<li>'+value.category_name+': '+value.sum_price+'</li>');
+                })
+            },
+            error: function(xhr, status, error) {
+                // Handle the error here
+                console.log(xhr,error);
+            }
+        });
+        $.ajax({
+            url: 'index.php?route=report/getOrderListCategory',
+            method: 'GET',
+            data: { date: date, table_arr_id: '47,39,40' },
+            success: function(response) {
+                // console.log(response);
+                $('#list-order-detail-tik-send').html('');
+                $.each(response, function(index, value) {
+                    $('#list-order-detail-tik-send').append('<li>'+value.category_name+': '+value.sum_price+'</li>');
                 })
             },
             error: function(xhr, status, error) {

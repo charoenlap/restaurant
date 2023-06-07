@@ -114,7 +114,7 @@
                     <div class="tab-pane fade  show active" id="qrImage" role="tabpanel" aria-labelledby="qrImageTab" style="text-align: center; font-size: 20px;">
                         <img src="images/qr2.jpg" class="img-fluid">
                         <br>
-                        <label for="">นางสาว ศิริลักษณ์ แซ่จาง</label>
+                        <label for="">นาย ชาตรี มณีวรวัฒน์</label>
                     </div>
                 </div>
                 <div class="row">

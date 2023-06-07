@@ -52,5 +52,48 @@
         public function updateImageMenu($menu_id,$file_name){
             $this->query("UPDATE res_menu SET image='".$this->escape($file_name)."' WHERE id=".(int)$menu_id);
         }
+
+
+        public function getSumPayment($month=0){
+            $result = array();
+            $where = ' WHERE id<>0 ';
+            if(!empty($month)){
+                $where .= " AND MONTH(date_create) = '".$month."'";
+            }
+            $result = $this->query("SELECT DATE(date_create) AS order_date, SUM(amount) AS total_amount, id FROM res_payment ".$where." GROUP BY DATE(date_create) ORDER BY order_date DESC");
+            return $result;
+        }
+        public function getSumPayment_v2($month=0){
+            $result = array();
+            $where = ' WHERE id<>0 ';
+            if(!empty($month)){
+                $where .= " AND MONTH(date_create) = '".$month."'";
+            }
+            $result = $this->query("SELECT DATE(date_create) AS order_date, SUM(amount) AS total_amount, id FROM res_payment ".$where." GROUP BY DATE(date_create) ORDER BY order_date DESC");
+            return $result;
+        }
+        public function getOrderListCategory($date='', $table_arr_id = ''){
+            $result = array();
+            $sql = "SELECT
+                res_category.category_name,
+                SUM(res_order.price) as sum_price, res_category.id
+            FROM
+                res_category
+                INNER JOIN
+                res_menu
+                ON 
+                    res_category.id = res_menu.category_id
+                INNER JOIN
+                res_order
+                ON 
+                    res_order.menu_id = res_menu.id ";
+            $sql .= " WHERE res_order.date_create like '".$date." %' ";
+            if ($table_arr_id) {
+                $sql .= " AND res_order.table_id IN (" . $table_arr_id . ')';
+            }
+            $sql .= " GROUP BY category_id";
+            $result = $this->query($sql);
+            return $result;
+        }
     }
 ?>

@@ -226,7 +226,7 @@
             $result = $this->query($sql);
             return $result->rows;
         }
-        public function getOrderListCategory($date='', $cate_id = ''){
+        public function getOrderListCategory($date='', $table_arr_id = ''){
             $result = array();
             $sql = "SELECT
                 res_category.category_name,
@@ -242,12 +242,13 @@
                 ON 
                     res_order.menu_id = res_menu.id ";
             $sql .= " WHERE res_order.date_create like '".$date." %' ";
-            if ($cate_id) {
-                $sql .= " AND res_category.id = " . $cate_id;
+            if ($table_arr_id) {
+                $sql .= " AND res_order.table_id IN (" . $table_arr_id . ')';
             }
             $sql .= " GROUP BY category_id";
             $result = $this->query($sql);
             return $result;
         }
 	}
+
 ?>
