@@ -1297,7 +1297,7 @@
 	}
 	function sendNoti($msg=''){
 		$message = $msg;
-		$token = "Bs88udY0fqIRLbai3cWE0B6RULxrWBhjSW9GEq6IOIp";
+		$token = "GZowpwR1b7IXK59uk3nLeCv8cbbJDx3XijjII396BuK";
 
 		$line_notify_url = "https://notify-api.line.me/api/notify";
 		$line_notify_token = $token;

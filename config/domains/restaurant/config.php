@@ -19,7 +19,7 @@
 		define('DB_USER','root');
 		define('DB_PASS','');
 		define('DB_DB','charoenlap_res');
-		$base = 'C:/xampp/htdocs/web/restaurant/public_html/';
+		$base = 'C:/xampp/htdocs/web/restaurant/public_htmls/';
 		define('DOCUMENT_ROOT','C:/xampp/htdocs/web/restaurant/lib/');
 		define('DOCUMENT_ROOT_LINE','C:/xampp/htdocs/web/restaurant/line/');
 		define('MURL','http://charoenlap.com/restaurant/');
@@ -31,10 +31,10 @@
 			define('DB_USER','root');
 			define('DB_PASS','root');
 			define('DB_DB','restaurant');
-			$base = $_SERVER['DOCUMENT_ROOT'].'/restaurant/public_html/';
+			$base = $_SERVER['DOCUMENT_ROOT'].'/restaurant/public_htmls/';
 			define('DOCUMENT_ROOT','C:\MAMP\htdocs\restaurant\lib/');
-			define('DOCUMENT_ROOT_LINE','C:\MAMP\htdocs\restaurant\public_html/line/');
-			define('MURL','http://localhost/restaurant/public_html/');
+			define('DOCUMENT_ROOT_LINE','C:\MAMP\htdocs\restaurant\public_htmls/line/');
+			define('MURL','http://localhost/restaurant/public_htmls/');
 			define('PATH_JSON','C:\MAMP\htdocs\restaurant\json/');
 		}else{
 			define('PREFIX', 'res_');
@@ -42,10 +42,10 @@
 			define('DB_USER','root');
 			define('DB_PASS','root');
 			define('DB_DB','restaurant');
-			$base = $_SERVER['DOCUMENT_ROOT'].'/restaurant/public_html/';
+			$base = $_SERVER['DOCUMENT_ROOT'].'/restaurant/public_htmls/';
 			define('DOCUMENT_ROOT','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/lib/');
-			define('DOCUMENT_ROOT_LINE','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/public_html/line/');
-			define('MURL','http://localhost/restaurant/public_html/');
+			define('DOCUMENT_ROOT_LINE','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/public_htmls/line/');
+			define('MURL','http://localhost/restaurant/public_htmls/');
 			define('PATH_JSON','/Users/charoenlapanatamsombat/Documents/htdocs/restaurant/json/');
 		}
 	}
