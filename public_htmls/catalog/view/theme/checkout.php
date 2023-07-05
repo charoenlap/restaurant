@@ -460,10 +460,11 @@
                     success: function(response) {
                         console.log(response);
                         // Handle successful response
-                        // window.location = 'index.php?route=home';
+                        window.location = 'index.php?route=home';
                     },
                     error: function() {
                     // Handle errors
+
                         console.log(response);
                     }
                 });
