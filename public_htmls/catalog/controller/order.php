@@ -51,6 +51,23 @@
 
 			}
 	    }
+        public function getReceipt () {
+            $result = $this->model('master')->getReceipt();
+            $this->json($result->rows);
+        }
+        public function saveReceipt () {
+            $data = $_POST;
+            $this->model('master')->saveReceipt($data);
+        }
+        public function delReceipt () {
+            $table_id = (int)get('table_id');
+            $this->model('master')->deleteReceipt($table_id);
+        }
+        public function getTableDetail() {
+            $table_id = get('table_id');
+            $result = $this->model('master')->getTableID($table_id)->row;
+            $this->json($result);
+        }
 		public function getMenu(){
 			$id = (int)get('menuId');
 			$result = $this->model('master')->getMenuID($id);
@@ -66,6 +83,10 @@
 				$data = $_POST;
 				$table_id = (int)$data['table_id'];
 				$this->model('master')->submitPrintOrder($table_id);
+                $data_receipt = array(
+                    'table_id' => $table_id
+                );
+                $this->model('master')->saveReceipt($data_receipt);
 				echo "success";
 				// foreach($data['menu_id'] as $key => $val){
 				// 	$insert = array(

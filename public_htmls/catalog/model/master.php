@@ -149,6 +149,7 @@
             $sql = "SELECT *,res_order.id AS id,res_menu.id AS menu_id,res_order.price AS price FROM res_order 
             LEFT JOIN res_option ON res_order.option_id = res_option.id 
             LEFT JOIN res_menu ON res_menu.id = res_order.menu_id
+            LEFT JOIN res_table ON res_table.id = res_order.table_id
             WHERE table_id = ".(int)$id." AND flag_checkout=0";
             $result = $this->query($sql);
             return $result;
@@ -277,6 +278,18 @@
             }
             $sql .= " GROUP BY category_id";
             $result = $this->query($sql);
+            return $result;
+        }
+        public function getReceipt(){
+            $result = $this->query("SELECT * FROM res_receipt");
+            return $result;
+        }
+        public function deleteReceipt($table_id){
+            $this->delete('receipt','table_id='.$table_id);
+        }
+        public function saveReceipt($data=array()){
+            $result = array();
+            $result = $this->insert('receipt',$data);
             return $result;
         }
 	}

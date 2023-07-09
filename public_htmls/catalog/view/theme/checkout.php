@@ -1,11 +1,16 @@
 <div class="container mb-4 pb-4">
+    <div class="row ">
+        <a href="#" class="btn btn-primary btn-block" id="printReceipt">พิมพ์ใบเสร็จ</a>
+    </div>
     <div class="row mt-4">
+
         <div class="col-6">
             <p class="text-danger text-center" id="txtShowError"></p>
             <table class="table" id="tableList">
                 <tbody></tbody>
             </table>
         </div>
+
         <div class="col-6">
             <p></p>
             <table class="table" id="tableSum">
@@ -476,5 +481,24 @@
         });
 
     });
+    $('#printReceipt').click(function() {
+        $.ajax({
+            url: 'index.php?route=order/saveReceipt&table_id=' + <?php echo get('table_id');?>,
+            type: 'POST',
+            data: {
+                table_id: '<?php echo get('table_id');?>',
+            },
+            success: function(response) {
+                console.log(response);
+                // Handle successful response
+                // window.location = 'index.php?route=home';
+                alert('ปรินละ')
+            },
+            error: function() {
+                // Handle errors
+                console.log(response);
+            }
+        });
+    })
 </script>
 
